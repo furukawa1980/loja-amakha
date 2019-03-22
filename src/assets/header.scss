@@ -1,0 +1,86 @@
+.header {
+    padding: 0.5rem 0 0 0;		
+    background:#f2f2f2;
+	.input-group {
+		align-items: center;
+		@include spaces(margin, top, $ten);
+		@include spaces(margin, bottom, $ten);
+		input, button {font-size: 1.2rem; height:30px;} 
+	}
+	.header-menu {
+		display: $display-flex; 
+		align-items: center;
+		.fa-bars {font-size:2.1rem;}
+		.logo {
+			width:78px; 
+			height:40px; 
+			@include spaces(margin, right, $twenty);
+			@include spaces(margin, left, $twenty);
+		}
+	}
+	.header-infos {
+		display: $display-flex; 
+		align-items: center;
+		flex-direction: row-reverse;
+		.fa-user {
+			font-size:2.2rem; 
+			@include spaces(margin, right, $twenty);
+			@include spaces(margin, left, $twenty);
+		}
+		.fa-shopping-cart {font-size:2.2rem;}
+		.amk-balance {margin: 0.3rem 0 0 0;}
+	}
+}
+
+.topbar {display:none;}
+
+
+@media only screen and (min-width: 992px) {
+
+	.header { 
+		padding: 1rem 0 1rem 0;
+		.header-menu {
+			.fa-bars {display:none;}
+			.logo {width:122px; height:62px; margin: $no-margin;}
+		}
+		.input-group {
+			input, button {height:40px;} 
+		}
+		.header-infos {
+			order: 1;
+		}
+	}
+	
+	.topbar {
+		display: block;
+		.header-menu-desktop {
+			height:60px;
+			border-bottom: $border-bottom;
+			order: 2;
+			.fa-bars {font-size:2.1rem;}
+			.topbar-menu {
+				display: $display-flex;
+				height: 60px;
+				align-items: center;
+				p {
+					font-weight: bold;
+					font-size: 1.6rem;
+					text-transform: uppercase;
+					margin: 0.2rem 0 0 1rem;
+				}
+			}
+			.topbar-menu-categories {
+				display: $display-flex;
+				height: 60px;
+				align-items: center;
+				justify-content: flex-end;
+				list-style-type:none;
+				li {
+					@include spaces(margin, left, $thirty); 
+					a {font-size:1.4rem; color:#333;}
+				}
+			}	
+		}
+	}
+
+}

@@ -1,0 +1,136 @@
+.content {
+	display: $display-flex;
+	min-height: 100vh;
+	@include spaces(padding, bottom, $thirty);
+	.main {
+		display: $display-flex;
+		flex: 1;
+		#breadcrumb {
+			background: lighten(rebeccapurple, 15%);
+			order: -2;
+			@include spaces(padding, top, $ten);
+			.breadcrumb {
+				background: none;
+				padding: 1.2rem 0;
+				li, a { color:#fff;}
+				li:before {color:#fff;}
+			}
+			&:hover {
+				background: lighten(rebeccapurple, 20%);
+			}
+		}
+		.select {
+			.custom-select {
+				width: 150px; 
+				font-size: 1.2rem;
+			}
+		}
+		.titles {
+			@include titles(#333, 1.6rem, $border-bottom);
+			order: -2;
+			@include spaces(margin, top, $twenty);
+		}
+		.card-wrap {
+			display: $display-flex;
+			flex-wrap: wrap;
+			.card {
+				margin:0;
+				@include spaces(padding, top, $thirty);
+				border: $no-border;
+				border-bottom: $border-bottom;
+				.card-content {
+					display: $display-flex;
+					flex-direction: row;
+					img {
+						width: 160px; 
+						height:160px;
+					}
+					.card-body {
+						padding:8px;
+						h3 {font-size:1.3rem; line-height: 1.8rem; margin: $no-margin;}
+						.fa-star {font-size: 1.4rem;}
+						p {
+							@include spaces(margin, top, $twenty);
+							font-size:1.2rem;
+						}
+						span {display:block; font-size:1.6rem;}
+						.btn-group {
+							@include spaces(margin, bottom, $twenty);
+							background: #ccc;
+							.fa-shopping-cart {font-size: 1.2rem;}
+						}
+					}
+				}
+			}
+		}
+		.sidebar {
+        	display:none;
+    	}
+    }
+}
+
+
+// MEDIA QUERIES
+@media only screen and (min-width: 576px) {
+	
+	.content {
+		.main {
+			.card-wrap {
+				order: 1;
+				.card {
+					border: $no-border;
+					.card-content {
+						flex-direction: column;
+						.card-body {
+							padding:0.5rem 0.4rem;
+							width:160px;
+							.btn-group {
+								display: $display-flex;
+								justify-content: center;
+							}
+						}
+					}
+				}
+			}
+			.sidebar {
+				display:block;
+				@include spaces(padding, top, $thirty); 
+				ul {
+					padding: $no-padding;
+					li {
+						list-style-type: none;
+						margin:1.4rem 0 0 0.8rem;
+					}
+					a {
+						color:#333;
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+
+@media only screen and (min-width: 992px) {
+
+	.content {
+		.main {
+			.card-wrap {
+				.card {
+					.card-content {
+						@include default-border;
+						padding: 1rem 2rem;
+						width: 200px;
+						&:hover {
+							border:0.1rem solid rgb(118, 190, 238);
+							cursor: pointer;
+						}
+					}
+				}
+			
+			}
+		}
+	}
+
+}

@@ -1,0 +1,83 @@
+:root {
+	font-size: 62.5%;
+	html, body {
+		font-size: 1rem;
+		font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+	
+}
+
+// VARIABLES
+$display-flex: flex;
+$no-padding:0;
+$no-margin:0;
+$no-border: 0;
+$border: 0.1rem solid #ccc;
+$border-bottom: 0.1rem solid #ccc;
+$directions: top, right, bottom, left;
+$ten : 1rem;
+$twenty : 2rem;
+$thirty : 3rem;
+$forty : 4rem;
+
+// PLACEHOLDERS
+%center { 
+    display:block; 
+    margin:0 auto;
+}
+
+%hover {
+	text-decoration: underline; color:#fff;
+}
+
+ 
+// MIXINS
+@mixin spaces ($type: margin, $direction: all, $amount: $ten){
+	@if $type == padding {
+		@if $direction == all{
+			padding: $amount;
+		} @else if $direction == top {
+			padding-top:$amount
+		} @else if $direction == left {
+			padding-left:$amount
+		} @else if $direction == right {
+			padding-right:$amount
+		} @else {
+			padding-bottom:$amount
+		}
+	} @else {
+		@if $direction == all{
+			margin: $amount;
+		} @else if $direction == top {
+			margin-top:$amount
+		} @else if $direction == left {
+			margin-left:$amount
+		} @else if $direction == right {
+			margin-right:$amount
+		} @else {
+			margin-bottom:$amount
+		}
+	}
+}
+
+@mixin titles($color, $size, $border-bottom) {
+    color: $color;
+    font-size: $size;
+	border-bottom: $border-bottom;
+}
+
+@mixin default-text {
+	font: {
+	  size: 1.3rem;
+	}
+	color: #333;
+  }
+  
+@mixin default-border {
+	border: {
+		style: solid;
+		width: 0.1rem;
+		color: #ccc;
+		radius: 0.3rem;
+	}
+}
