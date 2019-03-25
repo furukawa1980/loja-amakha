@@ -112,7 +112,7 @@
 						right: -28px;
 						border-top:30px solid transparent;
 						border-bottom: 30px solid transparent;
-						border-left: 28px solid #ccc;
+						border-left: 29px solid #ccc;
 					}
 					.box:before {
 						right: auto;
@@ -138,9 +138,8 @@
 						}
 					}
 					.box:after {
-						border-left: 28px solid lighten(rebeccapurple, 15%); 
+						border-left: 29px solid lighten(rebeccapurple, 15%); 
 					}
-					
 				}
 			}	
 

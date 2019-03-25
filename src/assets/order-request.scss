@@ -1,0 +1,37 @@
+.content {
+    display: $display-flex;
+		min-height: 100vh;
+		@include spaces(padding, bottom, $thirty);
+		.main {
+    				display: $display-flex;
+        		flex-wrap:wrap;
+        		flex: 1;
+						.order-request {
+								display: flex;
+								padding: 20px 0 0 0;
+								@include spaces(margin, top, $thirty);
+								h3 {font-size:14px; margin:0 0 10px 0; font-weight:bold;}
+								p {font-size:13px;}
+								.order-request-content {
+										border:1px solid #ccc;
+										.order-request-informations {
+												margin:0 0 20px 0;
+												span {float: right;}
+										}
+										.order-request-summary {
+												h3 {
+													@include spaces(margin, bottom, $twenty);
+												}
+												p {border-bottom:1px solid #ccc; margin: 20px 0;}
+												span {float:right;}
+												margin:0 0 20px 0;
+										}
+										.order-request-total {
+												@include spaces(margin, top, $forty);
+												p {border-top:3px solid #333; border-bottom:3px solid #333; padding: 20px 0;}
+										}
+								}
+						}
+  	}
+
+}
