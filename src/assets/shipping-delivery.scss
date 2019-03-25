@@ -1,0 +1,32 @@
+.content {
+	display: $display-flex;
+	min-height: 100vh;
+	@include spaces(padding, bottom, $thirty);
+	.main {
+        display: $display-flex;
+        flex-wrap:wrap;
+        flex: 1;
+        .shipping-options {
+            @include spaces(margin, top, $thirty);
+            h3 {font-size:14px;}
+            .shipping-options-content {
+                display: flex;
+                border:1px solid #ccc;
+                border-radius: 3px;
+                font-size:14px;
+                padding:15px;
+                padding-bottom:0; 
+                .shipping-options-radio {
+                    span {float: right;}
+                    margin: 0 0 10px 10px;
+                    label {margin-left: 10px;}
+                }
+                div:nth-child(2) p {
+                    display: flex; 
+                    justify-content: flex-end;
+                } 
+            }
+        }  
+    }
+
+}
