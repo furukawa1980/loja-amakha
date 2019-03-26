@@ -1,37 +1,92 @@
-.content {
-    display: $display-flex;
-		min-height: 100vh;
-		@include spaces(padding, bottom, $thirty);
-		.main {
-    				display: $display-flex;
-        		flex-wrap:wrap;
-        		flex: 1;
-						.order-request {
-								display: flex;
-								padding: 20px 0 0 0;
-								@include spaces(margin, top, $thirty);
-								h3 {font-size:14px; margin:0 0 10px 0; font-weight:bold;}
-								p {font-size:13px;}
-								.order-request-content {
-										border:1px solid #ccc;
-										.order-request-informations {
-												margin:0 0 20px 0;
-												span {float: right;}
-										}
-										.order-request-summary {
-												h3 {
-													@include spaces(margin, bottom, $twenty);
-												}
-												p {border-bottom:1px solid #ccc; margin: 20px 0;}
-												span {float:right;}
-												margin:0 0 20px 0;
-										}
-										.order-request-total {
-												@include spaces(margin, top, $forty);
-												p {border-top:3px solid #333; border-bottom:3px solid #333; padding: 20px 0;}
-										}
+.order-request {
+		padding: 20px 0 0 0;
+		h3 {
+				font-size:14px; 
+				margin:0 0 15px 0; 
+				font-weight:bold;
+		}
+		p {
+				font-size:13px;
+				margin:0;
+				margin-bottom:10px;
+		}
+		.o-r-content {
+				margin:0 0 20px 0;
+				.o-r-c-info, .o-r-c-summary {
+						padding:10px;
+						border:1px solid #ccc;	
+						span {float:right;}
+				}	
+				.o-r-c-summary {
+						p {
+								margin: 20px 0;
+								border-bottom:1px solid #ccc;	
+						}
+				}
+		}
+		.accompany-your-order {
+				margin-top: 30px;
+				.o-r-content-cart {
+						display:flex;
+						align-items: center;
+						border:1px solid #ccc;	
+						padding: 10px;
+						margin-top:2px;
+						img {margin: 0 20px 0 0;}
+						p:last-child {
+							text-align: right; 
+							margin-left: auto;
+						}
+						span {
+							display:block;
+						}
+				}
+		}
+
+		ul.timeline {
+    list-style-type: none;
+    margin-top:30px;
+		}
+		ul.timeline:before {
+				content: ' ';
+				background: #d4d9df;
+				display: inline-block;
+				position: absolute;
+				left: 29px;
+				width: 2px;
+				height: 100%;
+				z-index: 400;
+		}
+		ul.timeline > li {
+				margin: 20px 0;
+				padding-left: 20px;
+		}
+		ul.timeline > li:before {
+				content: ' ';
+				background: white;
+				display: inline-block;
+				position: absolute;
+				border-radius: 50%;
+				border: 3px solid #22c0e8;
+				left: 20px;
+				width: 20px;
+				height: 20px;
+				z-index: 400;
+		}
+
+}
+
+
+@media only screen and (min-width: 768px) { 
+		.order-request {
+				display:flex;
+				flex-wrap: wrap;
+				.o-r-content {
+						.o-r-c-summary {
+								p {
+										margin: 41.5px 0;
 								}
 						}
-  	}
-
+				}
+		}
 }

@@ -1,0 +1,9 @@
+:root {
+  font-size: 62.5%;
+}
+
+:root html, :root body {
+  font-size: 1rem;
+  font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/*# sourceMappingURL=variables.css.map */
