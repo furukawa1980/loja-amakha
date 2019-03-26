@@ -11,6 +11,6 @@ export const ROUTES: Routes = [
     {path: 'HomeComponent', component: HomeComponent},
     {path: 'ShoppingCartComponent', component: ShoppingCartComponent},
     {path: 'ShippingDeliveryComponent', component: ShippingDeliveryComponent},
-    {path: 'PaymentComponent', component: PaymentComponent},
-    {path: '', component: OrderRequestComponent}
+    {path: '', component: PaymentComponent},
+    {path: 'OrderRequestComponent', component: OrderRequestComponent}
 ]

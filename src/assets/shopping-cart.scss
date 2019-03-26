@@ -1,10 +1,4 @@
-.content {
-	display: $display-flex;
-	min-height: 100vh;
-	@include spaces(padding, bottom, $thirty);
-	.main {
-		display: $display-flex;
-		flex: 1;
+
 		#breadcrumb {
 			background: lighten(rebeccapurple, 15%);
 			order: -2;
@@ -76,15 +70,10 @@
 			}
 		}
 
-	}
-
-}
 
 @media only screen and (min-width: 992px) {
 
-	.content {
 
-		.main {
 
 			.cart-steps-wrap {
 				display:flex;
@@ -142,10 +131,6 @@
 					}
 				}
 			}	
-
-		}
-
-	}
 
 }
 

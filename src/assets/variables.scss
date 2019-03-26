@@ -63,7 +63,12 @@ $forty : 4rem;
 @mixin titles($color, $size, $border-bottom) {
     color: $color;
     font-size: $size;
-	border-bottom: $border-bottom;
+		border-bottom: $border-bottom;
+}
+
+@mixin no-padding($padding-right: 0, $padding-left: 0) {
+		padding-right: $padding-right;
+		padding-left: $padding-left
 }
 
 @mixin default-text {

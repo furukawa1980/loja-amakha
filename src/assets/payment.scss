@@ -1,53 +1,77 @@
-.content {
-	display: $display-flex;
-	min-height: 100vh;
-	@include spaces(padding, bottom, $thirty);
-	.main {
-        display: $display-flex;
-        flex-wrap:wrap;
-        flex: 1;
-        .order-summary {
-			@include spaces(margin, top, $thirty);
-			.order-summary-content {
+.order-summary {
+    @include spaces(margin, top, $thirty);
+		.order-summary-content {
 				display:flex;
 				border: 1px solid #ccc;
 				padding:10px 0;
 				p {
-					margin: 0; font-size:14px;
-					span {color:red;}
+						margin: 0; font-size:14px;
+						span {
+								color:red;
+						}
 				}
-				div:last-child p {display: flex; justify-content: flex-end;}
-			}
+				div:last-child p {
+						display:flex; 
+						justify-content:flex-end;
+				}
 		}
-		.payment-tabs {
-			@include spaces(margin, top, $twenty);
-			font-size:14px;
-			.payment-txt {
-				@include spaces(margin, top, $twenty);
-				@include spaces(margin, bottom, $twenty);
-			}
-			.payment-tabs-content {
-				border:1px solid #ccc;
-				.cart-products {
-					display: flex;
-					height:80px;
-					border-bottom: 1px solid #ccc;
-					img {width:60px; height:60px;border: 1px solid #ccc; margin: 0 0px;}
-					p { 
-						font-size: 14px;
-						span {display: block;}
-					}
-					.form-control {
-						width:60px;
-						height: 40px;
-						text-align: center;
-					}
-				}
-				.cart-products:last-child {
-					border:0;
-				}
-			}
-		}
-    }
+}
 
+.payment-methods {
+    @include spaces(margin, top, $twenty);
+	  font-size:14px;
+	  .payment-methods-txt {
+				padding:0;
+				margin:0;
+			  @include spaces(margin, top, $twenty);
+				@include spaces(margin, bottom, $twenty);
+				p {
+					margin:0; 
+					margin-bottom:10px;
+					padding:0;
+				}
+		}
+		.payment-methods-products {
+				display: flex;
+				flex-wrap:wrap;
+			  .p-m-product {
+						.p-m-p-content {
+								display:flex;
+								align-items: center;
+								margin-bottom:2px;
+								border:$border;						
+								padding:10px;
+								img {width:60px; height:60px;}
+								p {
+										margin-left:20px;
+										font-size: 13px;
+										span {display:block;}
+								}
+								.btn-group {width:70px; height:25px; text-align:right; margin-left:auto;}
+						}
+			  }
+		}
+}
+
+@media only screen and (max-width: 767px) {
+
+		.p-m-product {
+				@include no-padding;
+		}
+
+}
+
+@media only screen and (min-width: 768px) {
+		
+		.payment-methods {
+				.payment-methods-products {
+						display: flex;
+						.p-m-product {
+								display: flex; 
+								flex-wrap:wrap;
+						}
+				}
+
+		}
+	
 }
