@@ -8,6 +8,10 @@
 }
 
 // VARIABLES
+$font-12: 1.2rem;
+$font-13: 1.3rem;
+$font-14: 1.4rem;
+$secondary-color: lighten(rebeccapurple, 15%);
 $display-flex: flex;
 $no-padding:0;
 $no-margin:0;
@@ -83,6 +87,6 @@ $forty : 4rem;
 		style: solid;
 		width: 0.1rem;
 		color: #ccc;
-		radius: 0.3rem;
+		radius: 0.6rem;
 	}
 }

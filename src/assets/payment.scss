@@ -1,17 +1,18 @@
 .order-summary {
     @include spaces(margin, top, $thirty);
 		.order-summary-content {
-				display:flex;
-				border: 1px solid #ccc;
-				padding:10px 0;
+	      display:$display-flex;
+				@include default-border;
+				padding:1rem 0;
 				p {
-						margin: 0; font-size:14px;
+						margin:$no-margin; 
+						font-size:$font-14;
 						span {
 								color:red;
 						}
 				}
 				div:last-child p {
-						display:flex; 
+						display:$display-flex; 
 						justify-content:flex-end;
 				}
 		}
@@ -19,59 +20,120 @@
 
 .payment-methods {
     @include spaces(margin, top, $twenty);
-	  font-size:14px;
+		font-size:$font-14;
+		a {
+				color:$secondary-color;
+				&:hover {
+						color:#333;
+				}
+		}
 	  .payment-methods-txt {
-				padding:0;
-				margin:0;
-			  @include spaces(margin, top, $twenty);
-				@include spaces(margin, bottom, $twenty);
+				margin:$no-margin;
+				@include spaces(margin, top, $thirty);
+				padding:$no-padding;
 				p {
-					margin:0; 
-					margin-bottom:10px;
-					padding:0;
+					@include spaces(margin, bottom, $ten);
+					margin:$no-margin;
+					padding:$no-padding;
 				}
 		}
 		.payment-methods-products {
-				display: flex;
+				display:$display-flex;
 				flex-wrap:wrap;
-			  .p-m-product {
-						.p-m-p-content {
-								display:flex;
-								align-items: center;
-								margin-bottom:2px;
-								border:$border;						
-								padding:10px;
-								img {width:60px; height:60px;}
-								p {
-										margin-left:20px;
-										font-size: 13px;
-										span {display:block;}
+				@include spaces(margin, top, $thirty);
+				.payment-methods-products-wrap {
+						display:$display-flex;		
+						flex-wrap:wrap;	
+						.p-m-product {
+								.p-m-p-content {
+										display:$display-flex;
+										align-items:center;
+										@include spaces(margin, bottom, 0.2rem);
+										@include default-border;
+										@include spaces(padding, all, $ten);
+										img {
+											width:60px; 
+											height:60px;}
+										p {
+												@include spaces(margin, left, 2rem);
+												font-size:$font-13;
+												span {
+														display:block;
+												}
+										}
+										.btn-group {
+												height:25px; 
+												text-align:right;
+												@include spaces(margin, left, auto); 
+										}
 								}
-								.btn-group {width:70px; height:25px; text-align:right; margin-left:auto;}
 						}
-			  }
-		}
+				}
+				.amk-exchange {
+						display:$display-flex;
+						.amk-exchange-content {
+								@include spaces(padding, all, 2rem); 
+								@include spaces(margin, bottom, 2rem); 
+								@include default-border;	
+								h3 {
+										margin: $no-margin;
+										@include spaces(margin, bottom, 2rem); 
+										padding: $no-padding; 
+										border-bottom:$border; 
+										font-size:$font-14; 
+								}
+								h4, h5 {
+										font-size:$font-13; 
+								}
+								h5 {
+										@include spaces(margin, bottom, 2rem); 
+								}
+								p {
+										margin:$no-margin;
+										@include spaces(margin, bottom, 2rem); 
+										padding: $no-padding; 
+										font-size:$font-12; 
+										span {
+											float:right;
+										}
+								}		
+								button {
+										color:$secondary-color;
+										border-color: $secondary-color;
+										font-size:$font-14;
+										height:40px; 
+										float:right;
+								}
+						}
+				}
+		}	
 }
 
+/* MEDIA QUERIE */
 @media only screen and (max-width: 767px) {
 
-		.p-m-product {
-				@include no-padding;
+    .payment-methods-products {
+		    @include no-padding;
+			  .payment-methods-products-wrap  {
+					  @include no-padding;
+					  margin-bottom:30px;
+					  .p-m-product {
+							  @include no-padding;
+					  }
+			  }
+			  .amk-exchange {
+				    @include no-padding;
+			  }
 		}
-
+		
 }
 
 @media only screen and (min-width: 768px) {
 		
 		.payment-methods {
 				.payment-methods-products {
-						display: flex;
-						.p-m-product {
-								display: flex; 
-								flex-wrap:wrap;
-						}
+					@include no-padding;
 				}
-
 		}
 	
 }

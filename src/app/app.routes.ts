@@ -8,9 +8,9 @@ import { PaymentComponent } from './payment/payment.component';
 import { OrderRequestComponent } from './order-request/order-request.component';
 
 export const ROUTES: Routes = [
-    {path: 'HomeComponent', component: HomeComponent},
-    {path: 'ShoppingCartComponent', component: ShoppingCartComponent},
-    {path: 'ShippingDeliveryComponent', component: ShippingDeliveryComponent},
-    {path: '', component: PaymentComponent},
-    {path: 'OrderRequestComponent', component: OrderRequestComponent}
+    {path: '', component: HomeComponent},
+    {path: 'shopping-cart', component: ShoppingCartComponent},
+    {path: 'shipping-delivery', component: ShippingDeliveryComponent},
+    {path: 'payment', component: PaymentComponent},
+    {path: 'order-request', component: OrderRequestComponent}
 ]
