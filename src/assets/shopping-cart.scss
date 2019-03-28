@@ -1,138 +1,148 @@
+.cart-steps-wrap {display: none;}
 
-		#breadcrumb {
-			background: lighten(rebeccapurple, 15%);
-			order: -2;
-			@include spaces(padding, top, $ten);
-			.breadcrumb {
-				background: none;
-				padding: 1.2rem 0;
-				li, a { color:#fff;}
-				li:before {color:#fff;}
+	.cart-products-wrap {
+		border:$border;
+		@include default-border;
+		@include spaces(margin, top, $thirty);
+		.cart-products {
+			display: flex;
+			height:80px;
+			border-bottom:$border;
+			img {
+				width:60px; 
+				height:60px;
+				border:$border; 
+				margin: 0 1rem;
 			}
+			p { 
+				@include default-text;
+				span {
+					display:block;
+				}
+			}
+			.fa-remove {
+				font-size:16px;
+			}
+			.form-control {
+				width:60px;
+    			height: 40px;
+				text-align: center;
+				border-radius:$border-radius;
+			}
+		}
+		.cart-products:last-child {
+			border:0;
+		}
+	}
+
+	.cart-products-values {
+		display:$display-flex;
+		height:102px;
+		border-bottom:$border;
+		@include spaces(margin, top, $twenty);
+		p {@include default-text;}
+		div:last-child p {
+			display:$display-flex;
+			justify-content:flex-end;
+		}
+	}
+
+	.cart-buttons {
+		display:$display-flex;
+		@include spaces(margin, top, $twenty);
+		i {font-size:16px;}
+		button {
+			@include default-button;
+			color:$white;
+    		font-size:$font-13;
+			@include spaces(margin, left, $ten);
+			background: $secondary-color;
+			height:40px;
+			transition: all 1s ease;
 			&:hover {
-				background: lighten(rebeccapurple, 20%);
+				@include default-button;
+				background: rebeccapurple;
+				color:$white;
 			}
 		}
-		.titles {
-			@include titles(#333, 1.6rem, $border-bottom);
-			order: -2;
-			@include spaces(margin, top, $twenty);
-			@include spaces(margin, bottom, $no-margin);
-		}
-
-		.cart-steps-wrap {display: none;}
-
-		.cart-products-wrap {
-			border:1px solid #ccc;
-			border-radius: 3px;
-			@include spaces(margin, top, $thirty);
-			.cart-products {
-				display: flex;
-				height:80px;
-				border-bottom: 1px solid #ccc;
-				img {width:60px; height:60px;border: 1px solid #ccc; margin: 0 10px;}
-				p { 
-					font-size: 14px;
-					span {display: block;}
-				}
-				.fa-remove {font-size:16px;}
-				.form-control {
-					width:60px;
-    				height: 40px;
-    				text-align: center;
-				}
-			}
-			.cart-products:last-child {
-				border:0;
-			}
-		}
-
-		.cart-products-values {
-			display: flex;
-			height:102px;
-			border-bottom:1px solid #ccc;
-			margin-top:18px;
-			p {font-size:14px;}
-			div:last-child p {
-				display: flex; 
-				justify-content: flex-end;
-			}
-		}
-
-		.cart-buttons {
-			display: flex;
-			margin-top:20px;
-			i {font-size:16px;}
-			button {
-				border-color:$secondary-color;
-				color:$secondary-color;
-    			font-size: 14px;
-				margin: 0 0 0 10px;
-				height:40px;
-			}
-		}
+	}
 
 
 @media only screen and (min-width: 992px) {
 
-
-
-			.cart-steps-wrap {
-				display:flex;
-				margin-top:20px;
-				.cart-step {
-					display: flex;
-					.box {
-						width:100%;
-						display: flex;
-						align-items:center;
-						position: relative;
-						height:60px;
-						background: #ccc; 
-						margin: 0 28px 0 0; 
-						border:0;
-						.circle {
-							width: 30px; height:30px; border-radius:100%; background:#fff; margin:0 20px 0 60px;
-							p { color:#ccc; text-align:center; line-height:30px;}
+    .cart-steps-wrap {
+		display:$display-flex;
+		@include spaces(margin, top, $twenty);
+			.cart-step {
+				display: flex;
+				
+				.box {
+				    display:$display-flex;
+					align-items:center;
+					width:100%;
+					height:60px;
+					position: relative;
+					background:#ccc; 
+					margin: 0 2.8rem 0 0; 
+					border:0;
+					.circle {
+						width: 30px; 
+						height:30px; 
+						border-radius:100%; 
+						background:$white; 
+						margin:0 2rem 0 6rem;
+						p {
+							color:#ccc; 
+							text-align:center; 
+							line-height:30px;
 						}
-						p {color:#fff; font-size:14px; margin:0;}
 					}
-					.box:after, .box:before {
-						content: " ";
-						position: absolute;
-						right: -28px;
-						border-top:30px solid transparent;
-						border-bottom: 30px solid transparent;
-						border-left: 29px solid #ccc;
-					}
-					.box:before {
-						right: auto;
-						left: 0;
-						border-left: 28px solid #fff;	
-						z-index: 2;
-					}
-					.box-first {
-						margin-left:0;
-						border-top-left-radius: 3px;
-						border-bottom-left-radius: 3px;
-						&:before {border:none;}
-						.circle {
-							margin:0 20px 0 40px;
-						}
+					p {
+						color:$white; 
+						font-size:$font-14; 
+						margin:$no-margin;
 					}
 				}
-				.cart-step-active {
-					.box {
-						background: lighten(rebeccapurple, 15%);
-						.circle {
-							p {color: lighten(rebeccapurple, 15%); }
-						}
-					}
-					.box:after {
-						border-left: 29px solid lighten(rebeccapurple, 15%); 
+
+				.box:after, .box:before {
+					content: " ";
+					position: absolute;
+					right: -2.8rem;
+					border-top:3rem solid transparent;
+					border-bottom: 3rem solid transparent;
+					border-left: 2.9rem solid #ccc;
+				}
+
+				.box:before {
+					right: auto;
+					left: 0;
+					border-left: 2.8rem solid $white;	
+					z-index: 2;
+				}
+
+				.box-first {
+					margin-left:$no-margin;
+					border-top-left-radius: 0.3rem;
+					border-bottom-left-radius: 0.3rem;
+					&:before {border:none;}
+					.circle {
+						margin:0 2rem 0 4rem;
 					}
 				}
-			}	
+			}
+
+			.cart-step-active {
+				.box {
+					background:$secondary-color;
+					.circle {
+						p {color:$secondary-color; }
+					}
+				}
+				.box:after {
+					border-left: 2.9rem solid $secondary-color; 
+				}
+			}
+	}	
 
 }
 

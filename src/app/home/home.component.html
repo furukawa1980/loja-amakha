@@ -1,19 +1,25 @@
 <div class="content">
   <main class="main"> 
-      <div class="container">
-          <div class="row">
 
-              <nav class="col-12" id="breadcrumb">
+      <nav class="col-12" id="breadcrumb">
+          <div class="container">
+              <div class="row pl-sm-4">
                   <ol class="breadcrumb">
                       <li class="breadcrumb-item"><a href="#">Home</a></li>
                       <li class="breadcrumb-item active">loja</li>
                   </ol>
-              </nav>
+              </div>
+          </div>
+      </nav>  
 
-              <section class="col-12">
+      <div class="container">
+          
+          <div class="row">
+
+              <section class="col-12 no-gutters">
 
                   <h2 class="titles">Loja</h2>
-
+                
                   <div class="select pull-right">
                       <select class="custom-select custom-select-sm">
                               <option selected>Filtrar por Categoria</option>
@@ -26,12 +32,13 @@
               </section>
       
               <section class="card-wrap col-sm-8 col-md-9 col-lg-9 col-xl-10">
+
                   <article class="card col-12 col-sm-6 col-md-4 col-xl-3">
                       <div class="card-content">
                           <img src="assets/images/store/produto.png">
                           <div class="card-body">
                               <h3>Máscara Tonalizante Vermelha Sem amônia ou oxidante</h3>
-                              <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                              <ngb-rating [(rate)]="currentRate"></ngb-rating>
                               <p>de R$ 399,00 <span>por R$ 280,50</span></p>
                               <div class="btn-group">
                                   <button class="btn btn-secondary"><i class="fa fa-minus"></i></button>
@@ -48,7 +55,7 @@
                           <img src="assets/images/store/produto.png">
                           <div class="card-body">
                               <h3>Máscara Tonalizante Vermelha Sem amônia ou oxidante</h3>
-                              <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                              <ngb-rating [(rate)]="currentRate"></ngb-rating>
                               <p>de R$ 399,00 <span>por R$ 280,50</span></p>
                               <div class="btn-group">
                                   <button class="btn btn-secondary"><i class="fa fa-minus"></i></button>
@@ -65,7 +72,7 @@
                           <img src="assets/images/store/produto.png">
                           <div class="card-body">
                               <h3>Máscara Tonalizante Vermelha Sem amônia ou oxidante</h3>
-                              <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                              <ngb-rating [(rate)]="currentRate"></ngb-rating>
                               <p>de R$ 399,00 <span>por R$ 280,50</span></p>
                               <div class="btn-group">
                                   <button class="btn btn-secondary"><i class="fa fa-minus"></i></button>
@@ -82,7 +89,7 @@
                           <img src="assets/images/store/produto.png">
                           <div class="card-body">
                               <h3>Máscara Tonalizante Vermelha Sem amônia ou oxidante</h3>
-                              <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                              <ngb-rating [(rate)]="currentRate"></ngb-rating>
                               <p>de R$ 399,00 <span>por R$ 280,50</span></p>
                               <div class="btn-group">
                                   <button class="btn btn-secondary"><i class="fa fa-minus"></i></button>
@@ -98,7 +105,7 @@
                               <img src="assets/images/store/produto.png">
                               <div class="card-body">
                                   <h3>Máscara Tonalizante Vermelha Sem amônia ou oxidante</h3>
-                                  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                  <ngb-rating [(rate)]="currentRate"></ngb-rating>
                                   <p>de R$ 399,00 <span>por R$ 280,50</span></p>
                                   <div class="btn-group">
                                       <button class="btn btn-secondary"><i class="fa fa-minus"></i></button>
@@ -115,7 +122,7 @@
                               <img src="assets/images/store/produto.png">
                               <div class="card-body">
                                   <h3>Máscara Tonalizante Vermelha Sem amônia ou oxidante</h3>
-                                  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                  <ngb-rating [(rate)]="currentRate"></ngb-rating>
                                   <p>de R$ 399,00 <span>por R$ 280,50</span></p>
                                   <div class="btn-group">
                                       <button class="btn btn-secondary"><i class="fa fa-minus"></i></button>
@@ -132,7 +139,7 @@
                               <img src="assets/images/store/produto.png">
                               <div class="card-body">
                                   <h3>Máscara Tonalizante Vermelha Sem amônia ou oxidante</h3>
-                                  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                  <ngb-rating [(rate)]="currentRate"></ngb-rating>
                                   <p>de R$ 399,00 <span>por R$ 280,50</span></p>
                                   <div class="btn-group">
                                       <button class="btn btn-secondary"><i class="fa fa-minus"></i></button>
@@ -149,7 +156,7 @@
                               <img src="assets/images/store/produto.png">
                               <div class="card-body">
                                   <h3>Máscara Tonalizante Vermelha Sem amônia ou oxidante</h3>
-                                  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                  <ngb-rating [(rate)]="currentRate"></ngb-rating>
                                   <p>de R$ 399,00 <span>por R$ 280,50</span></p>
                                   <div class="btn-group">
                                       <button class="btn btn-secondary"><i class="fa fa-minus"></i></button>

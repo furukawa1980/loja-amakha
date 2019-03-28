@@ -1,21 +1,27 @@
 .shipping-options {
     @include spaces(margin, top, $thirty);
-        h3 {font-size:14px;}
-        .shipping-options-content {
-            display: flex;
-            border:1px solid #ccc;
-            border-radius: 3px;
-            font-size:14px;
-            padding:15px;
-            padding-bottom:0; 
-            .shipping-options-radio {
-                span {float: right;}
-                margin: 0 0 10px 10px;
-                label {margin-left: 10px;}
+    h3 {font-size:$font-14;}
+    .shipping-options-content {
+        display:$display-flex;
+        @include default-text;
+        @include default-border;
+        padding:1.5rem;
+        @include spaces(padding, bottom, $no-padding);
+        p {
+            @include default-text;
+            a {
+                font-size:$font-13;
+                color:$secondary-color;
             }
-            div:nth-child(2) p {
-                display: flex; 
-                justify-content: flex-end;
+        }
+        .shipping-options-radio {
+            margin: 0 0 1rem 1rem;
+            span {float:right;}
+            label {@include spaces(margin, left, $ten);}
+        }
+        div:nth-child(2) p {
+            display:$display-flex;
+            justify-content: flex-end;
         } 
     }
 }  

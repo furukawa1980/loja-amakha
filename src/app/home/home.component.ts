@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HomeService } from "./home.service"
+import { Produtos } from "./home.model"
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+
+
+  currentRate = 5;
+
   constructor() { }
 
   ngOnInit() {
+   
+
   }
 
 }

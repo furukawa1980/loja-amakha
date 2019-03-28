@@ -30,10 +30,12 @@
                 <section class="order-summary col-12">
                     <article class="order-summary-content col-12">
                         <div class="col-6">
-                            <p>Pedido nº 12342684183</p>
-                            <p>Data do pedido 2/11/19</p>
-                            <p>3 itens</p>
-                            <p>Status: <span>Pendente</span></p>
+                            <p>Pedido nº <strong>123426841</strong></p>
+                            <div class="order-summary-inline">
+                                <p>Data: <span>2/11/19</span></p>
+                                <p><i>/</i>3 itens<i>/</i></p>
+                                <p>Status: <span>Pendente</span></p>
+                            </div>
                         </div>
                         <div class="col-6">
                             <p>Total: R$ 310,00</p>
@@ -56,7 +58,7 @@
                     </article>
   
                     <article class="col-6 d-flex justify-content-end">
-                        <button type="button" class="btn btn-outline-primary" [routerLink]="['/order-request']">Continuar</button>
+                        <button type="button" class="btn btn-outline-primary" [routerLink]="['/order-request']">Finalizar</button>
                     </article>
                 </section>
   

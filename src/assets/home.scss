@@ -4,38 +4,46 @@
 	@include spaces(padding, bottom, $thirty);
 	.main {
 		display: $display-flex;
-		flex: 1;
+		flex-wrap:wrap;
+		flex:1;
 		#breadcrumb {
-			background: lighten(rebeccapurple, 15%);
+			background:$secondary-color;
 			order: -2;
 			@include spaces(padding, top, $ten);
 			.breadcrumb {
 				background: none;
 				padding: 1.2rem 0;
-				li, a { color:#fff;}
-				li:before {color:#fff;}
+				li, a {
+					color:$white; 
+					font-size:$font-11;}
+				li:before {
+					color:$white;
+				}
 			}
 			&:hover {
-				background: lighten(rebeccapurple, 20%);
+				background: $secondary-color;
 			}
 		}
 		.select {
 			.custom-select {
 				width: 150px; 
+				height: 30px;
 				font-size: 1.2rem;
 			}
 		}
 		.titles {
 			@include titles(#333, 1.6rem, $border-bottom);
-			order: -2;
 			@include spaces(margin, top, $twenty);
+			@include spaces(margin, bottom, $twenty);
+			order: -2;
 		}
 		.card-wrap {
 			display: $display-flex;
-			flex-wrap: wrap;
+			flex-wrap: wrap; 
 			.card {
 				margin:0;
 				@include spaces(padding, top, $thirty);
+				@include spaces(padding, right, $no-padding);
 				border: $no-border;
 				border-bottom: $border-bottom;
 				.card-content {
@@ -58,6 +66,8 @@
 							@include spaces(margin, bottom, $twenty);
 							background: #ccc;
 							.fa-shopping-cart {font-size: 1.2rem;}
+							height:30px;
+							.btn {background:$secondary-color;}
 						}
 					}
 				}
@@ -102,7 +112,7 @@
 						margin:1.4rem 0 0 0.8rem;
 					}
 					a {
-						color:#333;
+						@include default-text;
 					}
 				}
 			}
@@ -121,9 +131,8 @@
 					.card-content {
 						@include default-border;
 						padding: 1rem 2rem;
-						width: 200px;
 						&:hover {
-							border:0.1rem solid rgb(118, 190, 238);
+							border:0.1rem solid $secondary-color;
 							cursor: pointer;
 						}
 					}

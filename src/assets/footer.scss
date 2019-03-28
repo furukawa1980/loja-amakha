@@ -1,28 +1,35 @@
 .footer {
-    background: lighten(rebeccapurple, 15%);
+    background: $secondary-color;
 	.social-media {
 		background: #ccc;
-		height: 37px;
-		i {font-size:2.5rem; margin-top: 0.7rem; @include spaces(margin, left, $ten); color: #333;}
-		p {line-height:3.7rem;}
+		height:37px;
+		i {
+			font-size:2.5rem; 
+			margin-top: 0.7rem; 
+			@include spaces(margin, left, $ten); 
+			color: #333;
+		}
+		p {
+			line-height:3.7rem; 
+			font-size:$font-12;
+		}
 	}
     .footer-content {
 		@include spaces(padding, top, $twenty); 
 		.footer-content-wrap {
 			@include spaces(margin, top, $ten); 
 			@include spaces(margin, bottom, $thirty); 
-			h3 {
-				font-size:1.6rem; 
-				color:#fff; 
+			h3, p {
+				color:$white; 
 				margin:$no-margin;
 				@include spaces(margin, bottom, $ten); 
 			}
+			h3 {
+				font-size:1.6rem; 
+			}
 			p {
-				color: #fff;
 				span {display:block;}
 				font-size: 1.4rem;
-				margin:$no-margin;
-				@include spaces(margin, bottom, $ten); 
 			}
 		}
 	}
@@ -32,7 +39,7 @@
 
 	.footer {
 		.footer-content-wrap {
-			display: flex;
+			display: $display-flex;
 		}
 	}
 

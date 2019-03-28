@@ -1,38 +1,40 @@
 .order-request {
-		padding: 20px 0 0 0;
+		padding:$no-padding;
+		@include spaces(padding, top, $twenty); 
 		h3 {
-				font-size:14px; 
-				margin:0 0 15px 0; 
+				font-size:$font-14; 
+				margin:0 0 1.5rem 0; 
 				font-weight:bold;
 		}
 		p {
-				font-size:13px;
-				margin:0;
-				margin-bottom:10px;
+				font-size:$font-13;
+				margin:$no-margin;
+				@include spaces(margin, bottom, $ten); 
 		}
 		.o-r-content {
-				margin:0 0 20px 0;
+				margin:0 0 2rem 0;
 				.o-r-c-info, .o-r-c-summary {
-						padding:10px;
-						border:1px solid #ccc;	
+						@include spaces(padding, all, $ten); 
+						@include default-border;
 						span {float:right;}
 				}	
 				.o-r-c-summary {
 						p {
-								margin: 20px 0;
-								border-bottom:1px solid #ccc;	
+								margin: 2rem 0;
+								border-bottom:$border;	
 						}
 				}
 		}
 		.accompany-your-order {
-				margin-top: 30px;
+				@include spaces(margin, top, $thirty); 
+				h3 {font-size:16px;}
 				.o-r-content-cart {
-						display:flex;
+						display:$display-flex;
 						align-items: center;
-						border:1px solid #ccc;	
-						padding: 10px;
-						margin-top:2px;
-						img {margin: 0 20px 0 0;}
+						@include default-border;
+						@include spaces(padding, all, $ten); 
+						@include spaces(margin, top, 0.2rem); 
+						img {margin: 0 2rem 0 0;}
 						p:last-child {
 							text-align: right; 
 							margin-left: auto;
@@ -44,29 +46,29 @@
 		}
 
 		.timeline-wrap {
-        padding: 0;
-				margin: 0;
-				margin-top: 30px;
+        padding: $no-padding;
+				margin: $no-margin;
+				@include spaces(margin, top, 3rem); 
 				.timeline {
-						border:1px solid #ccc;	
+						@include default-border;
 						position: relative;
-						padding:20px;
+						@include spaces(padding, all, $twenty); 
 						li {
-								margin: 0;
-								padding-left: 20px;
+								margin: $no-margin;
+								@include spaces(padding, left, $twenty); 
 								list-style-type: none;
 								position: relative;
 								label {
 										position:absolute; 
-										top:2px; 
-										left:-3px; 
-										color:lighten(rebeccapurple, 15%); 
+										top:0.2rem; 
+										left:-0.3rem; 
+										color:$secondary-color; 
 										z-index: 99;}
 								a {
-									color: lighten(rebeccapurple, 15%);
-									font-size:13px;
+									color:$secondary-color; 
+									font-size:$font-13;
 								}
-								p {font-size:12px; color:#333;}
+								p {font-size:$font-12; color:#333;}
 						}
 						li:before {
 								content: ' ';
@@ -74,8 +76,8 @@
 								display: inline-block;
 								position: absolute;
 								border-radius: 50%;
-								border: 2px solid lighten(rebeccapurple, 15%);
-								left: -10px;
+								border: 0.2rem solid $secondary-color; 
+								left: -1rem;
 								width: 20px;
 								height: 20px;
 								z-index: 9;
@@ -83,11 +85,11 @@
 				}
 				.timeline:before {
 						content: ' ';
-						background: lighten(rebeccapurple, 15%);
+						background: $secondary-color; 
 						display: inline-block;
 						position: absolute;
 						top:0;
-						left: 19px;
+						left: 1.9rem;
 						width: 2px;
 						height: 100%;
 						z-index: 9;
@@ -99,7 +101,7 @@
 
 @media only screen and (min-width: 768px) { 
 		.order-request {
-				display:flex;
+				display:$display-flex;
 				flex-wrap: wrap;
 				.o-r-content {
 						.o-r-c-summary {
@@ -109,12 +111,12 @@
 						}
 				}
 				.accompany-your-order {
-					margin-top: 20px;
+						@include spaces(margin, top, 2rem); 
 				}
 				.timeline-wrap {
-						margin-top: 20px;
+						@include spaces(margin, top, 2rem); 
 						.timeline {
-								margin-top:30px;
+								@include spaces(margin, top, 3.3rem); 
 						}
 				}
 		}
