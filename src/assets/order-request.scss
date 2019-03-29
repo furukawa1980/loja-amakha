@@ -34,7 +34,7 @@
 						@include default-border;
 						@include spaces(padding, all, $ten); 
 						@include spaces(margin, top, 0.2rem); 
-						img {margin: 0 2rem 0 0;}
+						img {margin: 0 2rem 0 0; width:60px; height:60px;}
 						p:last-child {
 							text-align: right; 
 							margin-left: auto;

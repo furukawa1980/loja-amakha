@@ -14,10 +14,11 @@
                 <div class="payment-methods-products col-12">
 
                     <div class="payment-methods-products-wrap col-12 col-md-6 pl-md-0">
-                        <article class="p-m-product col-12 pl-md-0">
+
+                        <article class="p-m-product col-12 pl-md-0" *ngFor="let produto of produtos">
                             <div class="p-m-p-content col-12">
-                                <img src="assets/images/store/img-product.png">
-                                <p>Máscara Tonalizante<span>Ref. 111111F</span></p>
+                                <img [src]="produto.imagePath">
+                                <p>{{ produto.name }}<span>Ref. {{ produto.ref }}</span></p>
                                 <div class="btn-group">
                                     <button class="btn btn-secondary"><i class="fa fa-minus"></i></button>
                                     <button class="btn btn-secondary">2</button>
@@ -26,29 +27,6 @@
                             </div>
                         </article>
 
-                        <article class="p-m-product col-12 pl-md-0">
-                            <div class="p-m-p-content col-12">
-                                <img src="assets/images/store/img-product.png">
-                                <p>Máscara Tonalizante<span>Ref. 111111F</span></p>
-                                <div class="btn-group">
-                                    <button class="btn btn-secondary"><i class="fa fa-minus"></i></button>
-                                    <button class="btn btn-secondary">2</button>
-                                    <button class="btn btn-secondary"><i class="fa fa-plus"></i></button>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="p-m-product col-12 pl-md-0">
-                            <div class="p-m-p-content col-12">
-                                <img src="assets/images/store/img-product.png">
-                                <p>Máscara Tonalizante<span>Ref. 111111F</span></p>
-                                <div class="btn-group">
-                                    <button class="btn btn-secondary"><i class="fa fa-minus"></i></button>
-                                    <button class="btn btn-secondary">2</button>
-                                    <button class="btn btn-secondary"><i class="fa fa-plus"></i></button>
-                                </div>
-                            </div>
-                        </article>
                     </div>
 
                     <div class="amk-exchange col-12 col-md-6 pr-md-0">

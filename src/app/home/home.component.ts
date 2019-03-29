@@ -9,15 +9,14 @@ import { Produtos } from "./home.model"
 })
 export class HomeComponent implements OnInit {
 
-
+  produtos: Produtos[]
 
   currentRate = 5;
 
-  constructor() { }
+  constructor(private home: HomeService) { }
 
   ngOnInit() {
-   
-
+      this.home.produtos().subscribe(produtos => this.produtos = produtos);
   }
 
 }

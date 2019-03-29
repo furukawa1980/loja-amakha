@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HomeService } from "../home/home.service"
+import { Produtos } from "../home/home.model"
 
 @Component({
   selector: 'app-tabs',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabsComponent implements OnInit {
 
-  constructor() { }
+  produtos: Produtos[]
+
+  currentRate = 5;
+
+  constructor(private home: HomeService) { }
 
   ngOnInit() {
+      this.home.produtos().subscribe(produtos => this.produtos = produtos);
   }
 
 }

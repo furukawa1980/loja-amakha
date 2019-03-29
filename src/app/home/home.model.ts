@@ -3,5 +3,6 @@ export interface Produtos {
 	name: string
 	price: number
 	priceDesc: number
+	ref: number
 	imagePath: string
 }

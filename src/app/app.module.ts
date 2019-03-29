@@ -14,6 +14,8 @@ import { PaymentComponent } from './payment/payment.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { OrderRequestComponent } from './order-request/order-request.component';
 
+import { HomeService } from "./home/home.service";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,7 @@ import { OrderRequestComponent } from './order-request/order-request.component';
     NgbModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [],
+  providers: [HomeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

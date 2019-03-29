@@ -61,7 +61,7 @@
 								.p-m-p-content {
 										display:$display-flex;
 										align-items:center;
-										@include spaces(margin, bottom, 2rem);
+										@include spaces(margin, bottom, 0.2rem);
 										@include default-border;
 										@include spaces(padding, all, $ten);
 										img {
@@ -87,6 +87,7 @@
 				}
 				.amk-exchange {
 						display:$display-flex;
+						align-items: flex-start;
 						.amk-exchange-content {
 								@include spaces(padding, all, 2rem); 
 								@include spaces(margin, bottom, 2rem); 

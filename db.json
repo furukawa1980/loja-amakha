@@ -2,44 +2,66 @@
   "products": [
     {
       "id": "mascara-tonalizante",
-      "name": "Máscara Tonalizante Vermelha Sem amônia ou oxidante",
+      "name": "Máscara Tonalizante Vermelha sem amônia ou oxidante",
       "price": "R$ 399,00",
       "priceDesc": "R$ 280,50",
+      "ref": "2948913",
       "imagePath": "assets/images/store/produto.png"
     },
     {
       "id": "mascara-tonalizante",
-      "name": "Máscara Tonalizante Vermelha Sem amônia ou oxidante",
+      "name": "Máscara Tonalizante Vermelha sem amônia ou oxidante",
       "price": "R$ 399,00",
       "priceDesc": "R$ 280,50",
+      "ref": "2948913",
       "imagePath": "assets/images/store/produto.png"
     },
     {
       "id": "mascara-tonalizante",
-      "name": "Máscara Tonalizante Vermelha Sem amônia ou oxidante",
+      "name": "Máscara Tonalizante Vermelha sem amônia ou oxidante",
       "price": "R$ 399,00",
       "priceDesc": "R$ 280,50",
+      "ref": "2948913",
       "imagePath": "assets/images/store/produto.png"
     },
     {
       "id": "mascara-tonalizante",
-      "name": "Máscara Tonalizante Vermelha Sem amônia ou oxidante",
+      "name": "Máscara Tonalizante Vermelha sem amônia ou oxidante",
       "price": "R$ 399,00",
       "priceDesc": "R$ 280,50",
+      "ref": "2948913",
       "imagePath": "assets/images/store/produto.png"
     },
     {
       "id": "mascara-tonalizante",
-      "name": "Máscara Tonalizante Vermelha Sem amônia ou oxidante",
+      "name": "Máscara Tonalizante Vermelha sem amônia ou oxidante",
       "price": "R$ 399,00",
       "priceDesc": "R$ 280,50",
+      "ref": "2948913",
       "imagePath": "assets/images/store/produto.png"
     },
     {
       "id": "mascara-tonalizante",
-      "name": "Máscara Tonalizante Vermelha Sem amônia ou oxidante",
+      "name": "Máscara Tonalizante Vermelha sem amônia ou oxidante",
       "price": "R$ 399,00",
       "priceDesc": "R$ 280,50",
+      "ref": "2948913",
+      "imagePath": "assets/images/store/produto.png"
+    },
+    {
+      "id": "mascara-tonalizante",
+      "name": "Máscara Tonalizante Vermelha sem amônia ou oxidante",
+      "price": "R$ 399,00",
+      "priceDesc": "R$ 280,50",
+      "ref": "2948913",
+      "imagePath": "assets/images/store/produto.png"
+    },
+    {
+      "id": "mascara-tonalizante",
+      "name": "Máscara Tonalizante Vermelha sem amônia ou oxidante",
+      "price": "R$ 399,00",
+      "priceDesc": "R$ 280,50",
+      "ref": "2948913",
       "imagePath": "assets/images/store/produto.png"
     }
   ],

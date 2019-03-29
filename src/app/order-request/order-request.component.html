@@ -37,20 +37,10 @@
 
                     <article class="accompany-your-order col-12 col-md-6">
                         <h3>Acompanhe o seu Pedido</h3>
-                        <div class="o-r-content-cart col-12">
-                            <img src="assets/images/store/img-product.png">
-                            <p>Máscara Tonalizante<span>Ref. 111111</span></p>
-                            <p>R$ 100,00</p>
-                        </div>
-                        <div class="o-r-content-cart col-12">
-                            <img src="assets/images/store/img-product.png">
-                            <p>Máscara Tonalizante<span>Ref. 111111</span></p>
-                            <p>R$ 100,00</p>
-                        </div>
-                        <div class="o-r-content-cart col-12">
-                            <img src="assets/images/store/img-product.png">
-                            <p>Máscara Tonalizante<span>Ref. 111111</span></p>
-                            <p>R$ 100,00</p>
+                        <div class="o-r-content-cart col-12" *ngFor="let produto of produtos">
+                            <img [src]="produto.imagePath">
+                            <p>{{ produto.name }}<span>Ref. {{ produto.ref }}</span></p>
+                            <p>{{ produto.priceDesc }}</p>
                         </div>
                     </article>
 
