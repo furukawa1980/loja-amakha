@@ -15,6 +15,7 @@ import { TabsComponent } from './tabs/tabs.component';
 import { OrderRequestComponent } from './order-request/order-request.component';
 
 import { HomeService } from "./home/home.service";
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HomeService } from "./home/home.service";
     ShippingDeliveryComponent,
     PaymentComponent,
     TabsComponent,
-    OrderRequestComponent
+    OrderRequestComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
