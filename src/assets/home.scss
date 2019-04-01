@@ -9,6 +9,7 @@
 		#breadcrumb {
 			background:$secondary-color;
 			order: -2;
+			height: 60px;
 			@include spaces(padding, top, $ten);
 			.breadcrumb {
 				background: none;

@@ -4,14 +4,14 @@
   
     <div class="row">
 
-        <section class="col-6 col-lg-2 header-menu">
+        <section class="col-8 col-lg-2 header-menu">
             <i class="fa fa-bars"></i>
-            <img src="assets/images/store/logo.png" alt="Amakha Paris" class="logo">
+            <a [routerLink]="['/']"><img src="assets/images/store/logo.png" alt="Amakha Paris" class="logo"></a>
         </section>
 
-        <section class="col-6 col-lg-2 header-infos">
-            <i class="fa fa-shopping-cart"></i>
-            <i class="fa fa-user"></i>
+        <section class="col-4 col-lg-2 header-infos">
+            <app-shopping-cart-dropdown></app-shopping-cart-dropdown>
+            <app-user-dropdown></app-user-dropdown>
             <p class="amk-balance">AMK: <strong>100</strong></p>
         </section>
 

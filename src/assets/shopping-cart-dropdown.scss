@@ -1,0 +1,51 @@
+.header-infos {
+	.dropdown-menu {
+		top: 10px!important;
+		border-radius: 6px;
+		border-width:2px;
+		transform: translateY(10px);
+		transition: 0.2s all; transform: none;
+		&:hover {
+			transform: translateY(0px);
+		}
+	}
+	.fa-user {
+		cursor: pointer;
+		&:after {
+			display: none;
+		}
+	}
+	#header-infos-content {
+		width: 250px; 
+		display: flex;
+		align-items: center;
+		padding:20px ;
+		border-bottom:1px solid #ccc;
+		p {
+			font-size: 13px;
+			margin:0;
+		}
+		.fa-remove {
+			font-size:14px;
+		}
+	}
+	#header-infos-total {
+		display: flex;
+		align-items: center;
+		padding: 20px;
+		p {
+			font-size:13px;
+			width: 100%;
+    		margin: 0;
+		}
+		span {
+			float: right;
+		}
+	}
+	button {
+		font-size: 1.2rem; height:30px; background:$secondary-color; border:rebeccapurple; border-radius:6px; margin-bottom:10px; transition: 0.2s ease-in;
+		&:hover {
+			background:rebeccapurple 
+		}
+	}
+}

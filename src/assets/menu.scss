@@ -59,6 +59,7 @@ app-menu {
 	left: 0;
 	// width: 200px;
 	text-align: left;
+	border-radius:6px;
 	z-index: 60;
 	-webkit-transform: translateY(10px);
 	-ms-transform: translateY(10px);
@@ -80,7 +81,7 @@ app-menu {
   .nav-menu li.has-dropdown>.dropdown .dropdown-body {
 	background-color: #fff;
 	-webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
 	border-top: 2px solid rebeccapurple;
   }
   
@@ -117,6 +118,8 @@ app-menu {
 	z-index: 70;
 	position: relative;
 	margin-left: -30px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
   }
 
   .nav-menu li.has-dropdown.megamenu>.dropdown.tab-dropdown .tab-content > .active {
@@ -129,10 +132,20 @@ app-menu {
 	box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
 	position: relative;
 	z-index: 60;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
   }
   
   .nav-menu li.has-dropdown.megamenu>.dropdown.tab-dropdown .tab-nav li {
 	border-bottom: 1px solid #323335;
+		&:first-child {
+			border-top-left-radius: 10px;
+		}
+		&:last-child {
+			border-bottom: 0;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 10px;
+		}
   }
   
   .nav-menu li.has-dropdown.megamenu>.dropdown.tab-dropdown .tab-nav li a {

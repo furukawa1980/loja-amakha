@@ -16,6 +16,8 @@ import { OrderRequestComponent } from './order-request/order-request.component';
 
 import { HomeService } from "./home/home.service";
 import { MenuComponent } from './menu/menu.component';
+import { UserDropdownComponent } from './user-dropdown/user-dropdown.component';
+import { ShoppingCartDropdownComponent } from './shopping-cart-dropdown/shopping-cart-dropdown.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { MenuComponent } from './menu/menu.component';
     PaymentComponent,
     TabsComponent,
     OrderRequestComponent,
-    MenuComponent
+    MenuComponent,
+    UserDropdownComponent,
+    ShoppingCartDropdownComponent
   ],
   imports: [
     BrowserModule,
