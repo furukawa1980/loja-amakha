@@ -69,17 +69,23 @@
 					margin: 0.2rem 0 0 1rem;
 				}
 			}
-			.topbar-menu-categories {
-				display: $display-flex;
-				height: 60px;
-				align-items: center;
+			nav {
+				display: flex;
+				width: 100%;
 				justify-content: flex-end;
-				list-style-type:none;
-				li {
-					@include spaces(margin, left, $thirty); 
-					a {font-size:1.4rem; color:#333;}
-				}
-			}	
+				.topbar-menu-categories {
+					display: $display-flex;
+					height: 60px;
+					align-items: center;
+					justify-content: flex-end;
+					list-style-type:none; 
+					margin:0;
+					li {
+						@include spaces(margin, left, $thirty); 
+						a {font-size:1.4rem; color:#333;}
+					}
+				}	
+			}
 		}
 	}
 
