@@ -49,7 +49,7 @@ app-menu {
 		transition: opacity 0.15s linear;
 	}
 	
-	.fade.in {
+	.fade.show {
 		opacity: 1!important;
 	}
   
@@ -74,8 +74,8 @@ app-menu {
 	-webkit-transform: translateY(10px);
 	-ms-transform: translateY(10px);
 	transform: translateY(10px);
-	opacity:0;
-	visibility: hidden; 
+	opacity:1;
+	visibility: visible; 
 	-webkit-transition: 0.2s all;
 	transition: 0.2s all;
   }
@@ -301,9 +301,9 @@ app-menu {
   ===========================================================*/
   
   @media only screen and (max-width: 991px) {
-	#nav-bottom {
-	  display: none;
-	}
+		#nav-bottom {
+			display: none;
+		}
   }
    
   .nav-menu-content {

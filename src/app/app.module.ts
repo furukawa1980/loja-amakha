@@ -18,6 +18,7 @@ import { HomeService } from "./home/home.service";
 import { MenuComponent } from './menu/menu.component';
 import { UserDropdownComponent } from './user-dropdown/user-dropdown.component';
 import { ShoppingCartDropdownComponent } from './shopping-cart-dropdown/shopping-cart-dropdown.component';
+import { ResponsiveMenuComponent } from './responsive-menu/responsive-menu.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ShoppingCartDropdownComponent } from './shopping-cart-dropdown/shopping
     OrderRequestComponent,
     MenuComponent,
     UserDropdownComponent,
-    ShoppingCartDropdownComponent
+    ShoppingCartDropdownComponent,
+    ResponsiveMenuComponent
   ],
   imports: [
     BrowserModule,
