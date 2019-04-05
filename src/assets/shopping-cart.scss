@@ -61,7 +61,7 @@
 			transition: all 1s ease;
 			&:hover {
 				@include default-button;
-				background: rebeccapurple;
+				background: #333;
 				color:$white;
 			}
 		}

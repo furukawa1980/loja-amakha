@@ -1,46 +1,172 @@
-.footer {
-    background: $secondary-color;
-	.social-media {
-		background: #ccc;
-		height:37px;
-		i {
-			font-size:2.5rem; 
-			margin-top: 0.7rem; 
-			@include spaces(margin, left, $ten); 
-			color: #333;
-		}
-		p {
-			line-height:3.7rem; 
-			font-size:$font-12;
-		}
+.social-media {
+	background: #ccc;
+	height:37px;
+	i {
+		font-size:2.5rem; 
+		margin-top: 0.7rem; 
+		@include spaces(margin, left, $ten); 
+		color: #333;
 	}
-    .footer-content {
-		@include spaces(padding, top, $twenty); 
-		.footer-content-wrap {
-			@include spaces(margin, top, $ten); 
-			@include spaces(margin, bottom, $thirty); 
-			h3, p {
-				color:$white; 
-				margin:$no-margin;
-				@include spaces(margin, bottom, $ten); 
-			}
-			h3 {
-				font-size:1.6rem; 
-			}
-			p {
-				span {display:block;}
-				font-size: 1.4rem;
-			}
-		}
+	p {
+		line-height:3.7rem; 
+		font-size:$font-14;
 	}
 }
 
-@media only screen and (min-width: 768px) {
+p {
+	font-size: 14px;
+	line-height: 2;
+}
+  
+a {
+	transition-duration: 500ms;
+	text-decoration: none;
+	outline: none;
+	font-size: 14px;
+	font-weight: 600; 
+	&:hover, &:focus {
+		transition-duration: 500ms;
+		text-decoration: none;
+		outline: none;
+		font-size: 14px;
+		font-weight: 600; 
+	}
+}
 
-	.footer {
-		.footer-content-wrap {
-			display: $display-flex;
+ul{
+	margin: 0;    
+	padding: 0; 
+	li {
+		list-style: none; 
+	}
+}
+
+.gradient-background-overlay:before {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.9);
+	background: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0.8) 100%, rgba(0, 0, 0, 0) 100%); 
+}
+  
+.gradient-background-overlay {
+	position: relative;
+	z-index: 3;
+}
+  
+.footer {
+	position: relative;
+	z-index: 1;
+	overflow-x: hidden; 
+	background:url(../assets/images/store/amakha.jpg) no-repeat center center;
+	background-size: cover;
+	padding:50px 0 0 0;
+	img {
+		height: auto;
+		max-width: 100%; 
+	}
+	.copywrite-text {
+		display: $display-flex; 
+		align-items: center; 
+		justify-content: center;	
+		width: 100%;
+		height: 60px;
+		background-color: #111113;
+		padding: 0 15px; 
+		p {
+			margin-bottom: 0;
+			font-size: 12px;
+			color: #7d7d7d; 
+			a {
+				font-size: 12px;
+				color: #7d7d7d; 
+			}
 		}
 	}
-
+	.footer-widget-area {
+		margin-bottom: 50px;
+		.widget-title {
+			margin-bottom: 50px; 
+			h6 {
+				font-size: 16px;
+				color: #ffffff;
+				margin-bottom: 0;
+				text-transform: uppercase;
+				border-bottom: 2px solid;
+				border-color: #947054;
+				line-height: 1.8;
+				display: inline-block; 
+			}
+		}
+		p {
+			color: #7d7d7d;
+			margin-bottom: 0;
+			font-weight: 400; 
+		}
+		.weekly-office-hours ul li {
+			display: $display-flex; 
+			align-items: center;
+			justify-content: space-between;
+			padding: 15px 0;
+			border-bottom: 1px solid #7d7d7d; 
+			&:first-of-type {
+				padding-top: 0; 
+			}
+			span {
+				color: #7d7d7d;
+				font-size: 14px;
+				font-weight: 400; 
+			}
+		}
+		.address {
+			margin-top: 40px; 
+			h6 {
+				position: relative;
+				z-index: 1;
+				color: #7d7d7d;
+				margin-bottom: 20px;
+				display: block;
+				font-size: 14px;
+				font-weight: 400;
+				padding-left: 40px;
+				line-height: 1.8; 
+				img {
+					position: absolute;
+					top: 4px;
+					z-index: 10;
+					left: 0; 
+				}
+			}
+		}
+		.useful-links-nav {
+			display: $display-flex;
+			flex-wrap: wrap; 
+			li {
+				-webkit-box-flex: 0;
+				flex: 0 0 50%;
+				min-width: 50%; 
+				a {
+					padding: 15px 0;
+					display: block;
+					color: #7d7d7d;
+					font-weight: 400; 
+					&:first-child, &:nth-child(2) {
+						padding-top: 0; 
+					}
+					&:hover, &:focus {
+						color: #947054; 
+					}
+				}
+			}
+		}
+		.featured-properties-slides {
+			position: relative;
+			z-index: 1; 
+		}
+  
+	}  
 }
