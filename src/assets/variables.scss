@@ -3,6 +3,7 @@
 	html, body {
 		font-size: 1rem;
 		font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		background:#f2f2f2;
 	}
 	
 }
@@ -13,7 +14,7 @@ $font-12: 1.2rem;
 $font-13: 1.3rem;
 $font-14: 1.4rem;
 $white: #fff;
-$secondary-color: lighten(black, 15%);
+$secondary-color: lighten(black, 20%);
 $display-flex: flex;
 $no-padding:0;
 $no-margin:0;
