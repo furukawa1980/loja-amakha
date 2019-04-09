@@ -31,6 +31,10 @@
 .payment-methods {
     @include spaces(margin, top, $twenty);
 		font-size:$font-14;
+		.nav-tabs {
+				background:#eee;
+				border-radius: 0.6rem;
+		}
 		a {
 				color:$secondary-color;
 				font-size:$font-13;

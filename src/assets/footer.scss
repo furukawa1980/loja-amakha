@@ -90,6 +90,10 @@ ul{
 	}
 	.footer-widget-area {
 		margin-bottom: 50px;
+		.footer-img-amakha {
+			height: auto;
+			width: 100%; 
+		}
 		.widget-title {
 			margin-bottom: 50px; 
 			h6 {
@@ -135,11 +139,13 @@ ul{
 				font-weight: 400;
 				padding-left: 40px;
 				line-height: 1.8; 
-				img {
+				i {
 					position: absolute;
-					top: 4px;
+					top:0;
 					z-index: 10;
-					left: 0; 
+					left: 0;
+					font-size:28px;
+					color: #947054; 
 				}
 			}
 		}

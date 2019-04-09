@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router'
 import { AppComponent } from './app.component'
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations"
+import { FormsModule } from '@angular/forms';
 
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
@@ -21,6 +22,7 @@ import { UserDropdownComponent } from './user-dropdown/user-dropdown.component';
 import { ShoppingCartDropdownComponent } from './shopping-cart-dropdown/shopping-cart-dropdown.component';
 import { ResponsiveMenuComponent } from './responsive-menu/responsive-menu.component';
 import { SnackbarComponent } from './snackbar/snackbar.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -36,12 +38,14 @@ import { SnackbarComponent } from './snackbar/snackbar.component';
     UserDropdownComponent,
     ShoppingCartDropdownComponent,
     ResponsiveMenuComponent,
-    SnackbarComponent
+    SnackbarComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     NgbModule,
+    FormsModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(ROUTES)
   ],

@@ -113,7 +113,14 @@
 					margin:0;
 					li {
 						@include spaces(margin, left, $thirty); 
-						a {font-size:1.4rem; color:#fff;}
+						a {
+							font-size:1.4rem; 
+							color:#fff; 
+							transition-duration: 500ms;
+							&:hover {
+								color: #ccc;
+							}
+						}
 					}
 				}	
 			}

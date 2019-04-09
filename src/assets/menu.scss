@@ -170,7 +170,7 @@
 }
 	
 .post .post-body a {
-		color: #947054;
+		color: #333;
 }
   
 .post .post-img {
@@ -274,6 +274,10 @@
 		font-size:$font-14;
 		a {
 			color:#333;
+			transition: 500ms ease-in;
+			&:hover {
+				color:#947054;
+			}
 		}
 }
 
