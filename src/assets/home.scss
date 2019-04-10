@@ -8,14 +8,24 @@
 		flex:1;
 		.banner {
 			width: 100%;
-			height:200px;
-			background:url("../assets/images//store//blog-4.jpg") rgba(148, 112, 84, 0.5);
+			height:300px;
+			img {
+				position: absolute;
+				width:100%;
+				height: 300px;
+				object-fit: cover;
+				z-index:-1;
+			}
+			// background:url("../assets/images/store/blog-4.jpg") no-repeat center top rgba(148, 112, 84, 0.5);
+
 			@include spaces(margin, bottom, $thirty);
 			.titles {
-				@include titles(#333, 1.6rem, $no-border);
+				@include titles($white, 3rem, $no-border);
 				@include spaces(margin, top, $twenty);
 				@include spaces(margin, bottom, $twenty);
 				order: -2;
+				font-weight: 600;
+				text-shadow: 2px 2px 4px #1a1a1a;
 			}
 		}
 		#breadcrumb {
@@ -26,10 +36,12 @@
 				background: none;
 				padding: 1.2rem 0;
 				li, a {
-					color:#333; 
-					font-size:$font-11;}
+					color:$white; 
+					font-size:$font-12;
+					text-shadow: 2px 2px 4px #1a1a1a;
+				}
 				li:before {
-					color:#333;
+					color:$white;
 				}
 			}
 		}

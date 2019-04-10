@@ -94,6 +94,13 @@ ul{
 			height: auto;
 			width: 100%; 
 		}
+		.img-slide {
+			img {
+				border: 0.5rem solid #f2f2f2;
+				border-radius: 0.6rem;
+				width: 100%;
+			}
+		}
 		.widget-title {
 			margin-bottom: 50px; 
 			h6 {
