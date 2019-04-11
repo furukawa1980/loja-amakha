@@ -39,7 +39,7 @@ input[type='checkbox']:checked + label > strong {
 }
 
 input[type='checkbox']:checked + label > span{
-  border: 0.8rem solid #947054;
+  border: 0.8rem solid #875905;
   animation: shrink-bounce 200ms cubic-bezier(.4,.0,.23,1);
 }
 

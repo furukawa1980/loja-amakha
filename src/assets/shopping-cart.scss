@@ -8,6 +8,7 @@
 			display: flex;
 			height:80px;
 			border-bottom:$border;
+
 			img {
 				width:60px; 
 				height:60px;
@@ -56,12 +57,13 @@
 			color:$white;
     		font-size:$font-13;
 			@include spaces(margin, left, $ten);
-			background: $secondary-color;
+			background-image: $primary-color;
 			height:40px;
-			transition: all 1s ease;
+			transition: 0.2s ease-in;
+			background-size: 200% auto;
 			&:hover {
 				@include default-button;
-				background: #333;
+				background-position: right center; 
 				color:$white;
 			}
 		}
@@ -133,13 +135,13 @@
 
 			.cart-step-active {
 				.box {
-					background:#947054;
+					background:$primary-color;
 					.circle {
 						p {color:$secondary-color; }
 					}
 				}
 				.box:after {
-					border-left: 2.9rem solid #947054; 
+					border-left: 2.9rem solid #B07200; 
 				}
 			}
 	}	

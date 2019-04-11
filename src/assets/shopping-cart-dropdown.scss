@@ -43,9 +43,16 @@
 		}
 	}
 	button {
-		font-size: 1.2rem; height:30px; background:$secondary-color; border: #333; border-radius:6px; margin-bottom:10px; transition: 0.2s ease-in;
+		font-size: 1.2rem; 
+		height:30px; 
+		background-image:$primary-color; 
+		border: #333; 
+		border-radius:6px; 
+		margin-bottom:10px; 
+		transition: 0.2s ease-in;
+		background-size: 200% auto;
 		&:hover {
-			background:#947054;
+			background-position:right center;
 		}
 	}
 }

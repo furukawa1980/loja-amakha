@@ -20,6 +20,8 @@ $font-12: 1.2rem;
 $font-13: 1.3rem;
 $font-14: 1.4rem;
 $white: #fff;
+$color1: #875905;
+$primary-color: linear-gradient(to right, #875905 0%, #B07200 100%);
 $secondary-color: lighten(black, 20%);
 $display-flex: flex;
 $no-padding:0;
@@ -106,7 +108,7 @@ $forty : 4rem;
 	border: {
 		style: solid;
 		width: 0.1rem;
-		color: $secondary-color;
+		color: $color1;
 		radius: 0.6rem;
 	}
 }

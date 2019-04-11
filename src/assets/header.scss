@@ -3,8 +3,8 @@
 	position: sticky;
 	top: 0;
     padding: 0.5rem 0 0 0;		
-	background:rgba(242, 242, 242, 0.8);
-	border-bottom: 3px solid rgba(148, 112, 84, 0.63);
+	background:rgba(242, 242, 242, 0.9);
+	border-bottom: 3px solid #875905;
 	z-index:99999;
 	.input-group {
 		align-items: center;
@@ -19,13 +19,18 @@
 			border-bottom-left-radius: 6px;
 		} 
 		.input-group-append {
-			button {
+			.btn-grad {
 				border:$no-border;
 				border-top-right-radius: 6px; 
 				border-bottom-right-radius: 6px;
-				background:#947054;
 				color:$white;
 				font-size:$font-13;
+				transition: 0.2s ease-in;
+				background-size: 200% auto;
+				background-image: $primary-color;
+				&:hover {
+					background-position: right center; 
+				}
 			}
 		}
 	}

@@ -6,6 +6,7 @@
         @include default-text;
         @include default-border;
         padding:1.5rem;
+        background: $white;
         @include spaces(padding, bottom, $no-padding);
         p {
             @include default-text;

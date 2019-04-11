@@ -16,8 +16,6 @@
 				object-fit: cover;
 				z-index:-1;
 			}
-			// background:url("../assets/images/store/blog-4.jpg") no-repeat center top rgba(148, 112, 84, 0.5);
-
 			@include spaces(margin, bottom, $thirty);
 			.titles {
 				@include titles($white, 3rem, $no-border);
@@ -81,13 +79,20 @@
 						span {display:block; font-size:1.6rem;}
 						.btn-group {
 							@include spaces(margin, bottom, $twenty);
-							background: #ccc;
 							border-radius:6px;
 							.fa-shopping-cart {font-size: 1.2rem;}
 							width: 132px;
 							height:30px;
-							.btn {background:#ccc; border: none;}
-							.btn:last-child {background:#947054;}
+							.btn {
+								background: $white; 
+								border-color: #875905; 
+								color:#875905; 
+								font-weight: bold;
+							}
+							.btn:last-child {
+								background:$primary-color; 
+								color:$white;
+							}
 						}
 					}
 				}
@@ -157,18 +162,32 @@
 
 	.content {
 		.main {
+			.banner {
+				.titles {
+					@include titles($white, 4rem, $no-border);
+				}
+			}
+			#breadcrumb {
+				.breadcrumb {
+					li, a {
+						font-size:$font-14;
+					}
+				}
+			}
 			.card-wrap {
 				.card {
 					.card-content {
 						@include default-border;
 						padding: 1rem 2rem;
+						background: $white;
 						img {
 							width: 160px; 
 							height:160px;
 						}
 						&:hover {
-							border:0.1rem solid #947054;
-							cursor: pointer; box-shadow: 0 0 3px 1px rgba(0,0,0,.08);
+							border:0.1rem solid #875905;
+							cursor: pointer; 
+							box-shadow: 0 0 3px 1px rgba(0,0,0,.08);
 						}
 					}
 				}

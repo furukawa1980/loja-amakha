@@ -53,9 +53,9 @@
 		}
 	}
 	button {
-		font-size: 1.2rem; height:30px; background:$secondary-color; border:rebeccapurple; border-radius:6px; margin-bottom:10px; transition: 0.2s ease-in;
+		font-size: 1.2rem; height:30px; background:$secondary-color; border-radius:6px; margin-bottom:10px; transition: 0.2s ease-in;
 		&:hover {
-			background:rebeccapurple 
+			background-position: right center;
 		}
 	}
 }

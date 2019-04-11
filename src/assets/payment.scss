@@ -5,11 +5,13 @@
 	      display:$display-flex;
 				@include default-border;
 				padding:1rem 0;
+				background:#eee;
 				p {
 						margin:$no-margin; 
-						font-size:$font-13;
+						font-size:$font-14;
 						span {
 								color:#ff0000;
+								font-weight:bold;
 						}
 				}
 				div:last-child p {
@@ -68,6 +70,7 @@
 										@include spaces(margin, bottom, 0.2rem);
 										@include default-border;
 										@include spaces(padding, all, $ten);
+										background:$white;
 										img {
 											width:60px; 
 											height:60px;}
@@ -83,7 +86,8 @@
 												text-align:right;
 												@include spaces(margin, left, auto); 
 												.btn {
-													background: $secondary-color;
+													background: #875905;
+													border-color: #875905;
 												}
 										}
 								}
@@ -96,6 +100,7 @@
 								@include spaces(padding, all, 2rem); 
 								@include spaces(margin, bottom, 2rem); 
 								@include default-border;	
+								background: $white;
 								h3 {
 										margin: $no-margin;
 										@include spaces(margin, bottom, 3rem); 
@@ -120,15 +125,16 @@
 								}		
 								button {
 										color:$secondary-color;
-										background: $secondary-color;
+										background: $primary-color;
 										color:$white;
 										@include default-button;
 										font-size:$font-13;
 										height:40px; 
 										float:right;
-										transition: all 1s ease;
+										transition: 0.2s ease-in;
+										background-size: 200% auto;
 										&:hover {
-												background: rebeccapurple;
+												background-position: right center;
 												color:$white;
 										}
 								}

@@ -20,6 +20,7 @@
 				.o-r-c-info, .o-r-c-summary {
 						@include spaces(padding, all, $ten); 
 						@include default-border;
+						background: $white;
 						span {float:right;}
 				}	
 				.o-r-c-summary {
@@ -38,6 +39,7 @@
 						@include default-border;
 						@include spaces(padding, all, $ten); 
 						@include spaces(margin, top, 0.2rem); 
+						background: $white;
 						img {margin: 0 2rem 0 0; width:60px; height:60px;}
 						p:last-child {
 							text-align: right; 
@@ -57,6 +59,7 @@
 						@include default-border;
 						position: relative;
 						@include spaces(padding, all, $twenty); 
+						background: $white;
 						li {
 								margin: $no-margin;
 								@include spaces(padding, left, $twenty); 
