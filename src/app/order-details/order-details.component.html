@@ -1,0 +1,57 @@
+<div class="content">
+  <main class="main"> 
+
+      <div class="banner">       
+            
+            <img src="assets/images/store/img-banner.jpg" alt="">
+
+            <div class="container"> 
+                <nav class="col-12" id="breadcrumb">
+                    <div class="row">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Loja</a></li>
+                            <li class="breadcrumb-item">Detalhes do Produto</li>
+                        </ol>
+                    </div>
+                </nav>  
+                <h2 class="titles">Detalhes do Produto</h2>
+            </div>
+
+      </div>
+
+      <div class="container">
+          
+          <div class="row">
+
+            <section class="order-details d-flex d-sm-flex">
+
+                <article class="order-details-img col-12 col-sm-5">
+                   <img src="assets/images/store/produto2.png" alt="">
+                </article>
+
+                <article class="order-details-description col-12 col-sm-7">
+                    <h2 class="titles">Máscara Tonalizante - Linha Capilar</h2>
+                    <p class="ref-number">(Ref.54197685)</p>
+                    <div class="rating">
+                        <ngb-rating [(rate)]="currentRate"></ngb-rating>
+                    </div>
+                    <p>É uma poção mágica do amor. Doce tentação que deixa um rastro de sensualidade envolvente. Sem amônia, etanolamina ou oxidante</p>
+                    <div class="col-sm-12 d-sm-flex justify-content-between align-items-center p-0">
+                      <p class="price-product">de R$ 399,00 <span>por R$ 280,50 </span></p>
+                      <button class="btn btn-primary btn-buy" [routerLink]="['/shopping-cart']">Comprar</button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-secondary"><i class="fa fa-minus"></i></button>
+                        <button class="btn btn-secondary">2</button>
+                        <button class="btn btn-secondary"><i class="fa fa-plus"></i></button>
+                        <button class="btn btn-secondary"><i class="fa fa-shopping-cart"></i></button>
+                    </div>
+                </article>
+
+            </section>
+                
+          </div>
+      </div>
+  </main>
+</div>

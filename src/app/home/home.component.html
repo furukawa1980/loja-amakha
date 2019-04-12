@@ -6,7 +6,7 @@
             <img src="assets/images/store/img-banner.jpg" alt="">
 
             <div class="container"> 
-                <nav class="col-4" id="breadcrumb">
+                <nav class="col-12" id="breadcrumb">
                     <div class="row">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -41,7 +41,7 @@
               <section class="card-wrap col-sm-8 col-md-9 col-lg-9 col-xl-10">
 
                   <article class="card col-12 col-sm-6 col-md-4 col-xl-3" *ngFor="let produto of produtos"> 
-                      <div class="card-content">
+                      <div class="card-content" [routerLink]="['/order-details']">
                           <img [src]="produto.imagePath">
                           <div class="card-body">
                               <h3>{{ produto.name }}</h3>

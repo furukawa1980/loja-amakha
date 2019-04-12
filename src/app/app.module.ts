@@ -23,6 +23,7 @@ import { ShoppingCartDropdownComponent } from './shopping-cart-dropdown/shopping
 import { ResponsiveMenuComponent } from './responsive-menu/responsive-menu.component';
 import { SnackbarComponent } from './snackbar/snackbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { OrderDetailsComponent } from './order-details/order-details.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     ShoppingCartDropdownComponent,
     ResponsiveMenuComponent,
     SnackbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    OrderDetailsComponent
   ],
   imports: [
     BrowserModule,

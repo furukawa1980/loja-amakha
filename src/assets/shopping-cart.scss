@@ -57,7 +57,7 @@
 			color:$white;
     		font-size:$font-13;
 			@include spaces(margin, left, $ten);
-			background-image: $primary-color;
+			background: $primary-color;
 			height:40px;
 			transition: 0.2s ease-in;
 			background-size: 200% auto;
@@ -141,7 +141,7 @@
 					}
 				}
 				.box:after {
-					border-left: 2.9rem solid #B07200; 
+					border-left: 2.9rem solid $primary-color; 
 				}
 			}
 	}	

@@ -109,7 +109,7 @@ ul{
 				margin-bottom: 0;
 				text-transform: uppercase;
 				border-bottom: 2px solid;
-				border-color: #875905;
+				border-color: $primary-color;
 				line-height: 1.8;
 				display: inline-block; 
 			}
@@ -152,7 +152,7 @@ ul{
 					z-index: 10;
 					left: 0;
 					font-size:28px;
-					color: #875905; 
+					color: $primary-color; 
 				}
 			}
 		}

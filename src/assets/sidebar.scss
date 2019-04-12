@@ -34,12 +34,12 @@ input[type='checkbox'] + label:hover > span, input[type='checkbox']:focus + labe
 }
 
 input[type='checkbox']:checked + label > strong {
-  color:#947054;
+  color:$primary-color;
   animation: shrink-bounce 200ms cubic-bezier(.4,.0,.23,1);
 }
 
 input[type='checkbox']:checked + label > span{
-  border: 0.8rem solid #875905;
+  border: 0.8rem solid $primary-color;
   animation: shrink-bounce 200ms cubic-bezier(.4,.0,.23,1);
 }
 
