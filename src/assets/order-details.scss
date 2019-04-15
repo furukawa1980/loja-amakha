@@ -1,28 +1,34 @@
 .order-details {
 	flex-wrap: wrap;
 	width:100%;
-	background: transparent;
+	background: $terciary-color;
+    @include spaces(padding, all, $thirty);
 	.order-details-img {
 		img {
 			width:100%;
 			height: auto;
 			@include default-border;
 			@include spaces(margin, bottom, $twenty);
-			background:$white;
+			background: $terciary-color;
 		}
 	}
 	.order-details-description {
 		.ref-number {
 			margin:0 20px 0 0;
 		}
-		span {font-size:1.6rem; margin-top:0.2rem;}
+		span {
+			font-size:1.6rem; 
+			margin-top:0.2rem;
+			margin: $no-margin;
+		}
 		p {
-			margin-top: 20px;
+			margin-top: 1rem;
+			margin-bottom: $no-margin;
 		}
 		.price-product {
 			span {
 				display: block;
-				font-size:2.5rem;
+				font-size:2.2rem;
 				font-weight:bold;
 				color: $primary-color;
 			}
@@ -31,7 +37,8 @@
 			width: 200px;
 			font-size: 2rem;
 			padding: 10px;
-			border-radius: 6px;
+			@include spaces(margin, top, $twenty);
+			border-radius: $border-radius;
 			border-color: $primary-color;
 			background: $primary-color;
 			&:hover {
@@ -39,27 +46,36 @@
 			}
 		}
 		.btn-group {
-			@include spaces(margin, bottom, $twenty);
-			border-radius:6px;
+			@include spaces(margin, top, $ten);
+			border-radius: $border-radius;
 			.fa-shopping-cart {font-size: 1.2rem;}
 			width: 132px;
 			height:30px;
 			.btn {
-				background: $white; 
+				background: $terciary-color; 
 				border-color: $primary-color; 
 				color: $primary-color; 
 				font-weight: bold;
 			}
 			.btn:last-child {
 				background:$primary-color; 
-				color:$white;
+				color: $terciary-color;
 			}
 		}
 	}
+}
+
+
+.order-details-teste {
+	flex-wrap: wrap;
+	width:100%;
+	background: transparent;
 	.order-details-alsoEnjoy {
 		@include spaces(margin, top, $forty);
 		h2 {
 			@include spaces(margin, bottom, $forty);
+			border-bottom: 0.1rem solid $primary-color;
+			padding-bottom: 1rem;
 		}
 		.slick-container {
 			display: flex;
@@ -70,9 +86,10 @@
 			
 		}
 	}
+
 }
 
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 767px) {
 
 	.order-details-description {
 		h2 {text-align: center;}
@@ -94,7 +111,7 @@
 
 }
 
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 768px) {
 
 	.order-details-description {
 		.ref-number {

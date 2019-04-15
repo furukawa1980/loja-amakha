@@ -6,8 +6,8 @@
     .img-thumbnail {
         padding: .25rem;
         background-color: transparent;
-        border: 1px solid #dee2e6;
-        border-radius: 0.6rem;
+        border: $no-border;
+        border-radius: $border-radius;
         width: 100%;
         height: auto;
         @include spaces(margin, bottom, $twenty);

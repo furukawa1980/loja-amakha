@@ -8,7 +8,7 @@ input[type='checkbox'] + label{
 	position: relative;
 	display:$display-flex;
 	align-items: center;
-	color: #333;
+	color: $txt-primary-color;
 	transition: color 250ms cubic-bezier(.4,.0,.23,1);
 }
 
@@ -27,7 +27,7 @@ input[type='checkbox'] + label > span{
 }
 
 input[type='checkbox'] + label:hover, input[type='checkbox']:focus + label{
-  color: #333;
+  color: $txt-primary-color;
 }
 input[type='checkbox'] + label:hover > span, input[type='checkbox']:focus + label > span{
   background: rgba(255,255,255,.1);

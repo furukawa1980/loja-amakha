@@ -3,8 +3,8 @@
 	position: sticky;
 	top: 0;
     padding: 0.5rem 0 0 0;		
-	background:rgba(242, 242, 242, 0.9);
-	border-bottom: 3px solid $primary-color;
+	background:rgba(254, 254, 254, 0.9);
+	border-bottom: 0.3rem solid $primary-color;
 	z-index:99999;
 	.input-group {
 		align-items: center;
@@ -13,17 +13,18 @@
 		input, button {
 			font-size: 1.2rem; 
 			height:35px; 
+			border: 1px solid #ddd!important;
 		}
 		input{
-			border-top-left-radius: 6px; 
-			border-bottom-left-radius: 6px;
+			border-top-left-radius: $border-radius; 
+			border-bottom-left-radius: $border-radius;
 		} 
 		.input-group-append {
 			.btn-grad {
 				border:$no-border;
-				border-top-right-radius: 6px; 
-				border-bottom-right-radius: 6px;
-				color:$white;
+				border-top-right-radius: $border-radius; 
+				border-bottom-right-radius: $border-radius;
+				color:$terciary-color;
 				font-size:$font-13;
 				transition: 0.2s ease-in;
 				background-size: 200% auto;
@@ -66,7 +67,7 @@
 				font-size:2rem;
 				color: $primary-color;
 			}
-			strong {color:#333;}
+			strong {color:$txt-primary-color;}
 		}
 	}
 }
@@ -95,11 +96,11 @@
 		background:$secondary-color;
 		.header-menu-desktop {
 			height:60px;
-			border-bottom: $border-bottom;
+			border-bottom: $border;
 			order: 2;
 			.fa-bars {
 				font-size:2.1rem; 
-				color:$white;
+				color:$terciary-color;
 			}
 			.topbar-menu {
 				display: $display-flex;

@@ -4,7 +4,7 @@ app-menu {
 }
 
 #nav-bottom {
-  border-top: 0px solid #e8eaed;
+  border-top: 0;
 }
 
 /*----------------------------*\
@@ -283,6 +283,5 @@ app-menu {
 }
 
 .nav-menu-content ul li a {
-  color: #333;
+  color: $txt-primary-color;
 }
-/*# sourceMappingURL=menu.css.map */

@@ -6,7 +6,7 @@
         @include default-text;
         @include default-border;
         padding:1.5rem;
-        background: $white;
+        background: $terciary-color;
         @include spaces(padding, bottom, $no-padding);
         p {
             @include default-text;
@@ -17,6 +17,7 @@
         }
         .shipping-options-radio {
             margin: 0 0 1rem 1rem;
+            padding:0.35rem;
             span {float:right;}
             label {@include spaces(margin, left, $ten);}
         }

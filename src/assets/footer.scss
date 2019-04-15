@@ -5,12 +5,12 @@
 		font-size:2.5rem; 
 		margin-top: 0.7rem; 
 		@include spaces(margin, left, $ten); 
-		color: $white;
+		color: $terciary-color;
 	}
 	p {
 		line-height:3.7rem; 
 		font-size:$font-14;
-		color: $white;
+		color: $terciary-color;
 	}
 }
 
@@ -81,10 +81,10 @@ ul{
 		p {
 			margin-bottom: 0;
 			font-size: 12px;
-			color: #7d7d7d; 
+			color: $txt-secondary-color; 
 			a {
 				font-size: 12px;
-				color: #7d7d7d; 
+				color: $txt-secondary-color; 
 			}
 		}
 	}
@@ -96,8 +96,8 @@ ul{
 		}
 		.img-slide {
 			img {
-				border: 0.5rem solid #f2f2f2;
-				border-radius: 0.6rem;
+				border: 0.5rem solid $terciary-color;
+				border-radius: $border-radius;
 				width: 100%;
 			}
 		}
@@ -115,7 +115,7 @@ ul{
 			}
 		}
 		p {
-			color: #7d7d7d;
+			color: $txt-secondary-color;
 			margin-bottom: 0;
 			font-weight: 400; 
 		}
@@ -124,12 +124,12 @@ ul{
 			align-items: center;
 			justify-content: space-between;
 			padding: 15px 0;
-			border-bottom: 1px solid #7d7d7d; 
+			border-bottom: 1px solid $txt-secondary-color; 
 			&:first-of-type {
 				padding-top: 0; 
 			}
 			span {
-				color: #7d7d7d;
+				color: $txt-secondary-color;
 				font-size: 14px;
 				font-weight: 400; 
 			}
@@ -139,7 +139,7 @@ ul{
 			h6 {
 				position: relative;
 				z-index: 1;
-				color: #7d7d7d;
+				color: $txt-secondary-color;
 				margin-bottom: 20px;
 				display: block;
 				font-size: 14px;
@@ -166,13 +166,13 @@ ul{
 				a {
 					padding: 15px 0;
 					display: block;
-					color: #7d7d7d;
+					color: $txt-secondary-color;
 					font-weight: 400; 
 					&:first-child, &:nth-child(2) {
 						padding-top: 0; 
 					}
 					&:hover, &:focus {
-						color: #947054; 
+						color: $primary-color; 
 					}
 				}
 			}

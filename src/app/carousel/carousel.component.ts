@@ -21,7 +21,7 @@ export class CarouselComponent {
           nextArrow:"<div class='next-slide'><i class='fa fa-arrow-circle-right'></i></div>",
           prevArrow:"<div class='prev-slide'><i class='fa fa-arrow-circle-left'></i></div>",
           slidesToShow: 4,
-          slidesToScroll: 4,
+          slidesToScroll: 1,
           responsive: [
             {
               breakpoint: 1920,

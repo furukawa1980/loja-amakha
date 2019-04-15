@@ -44,7 +44,7 @@
 		position: absolute;
 		left: 0;
 		text-align: left;
-		border-radius: 10px;
+		border-radius: $border-radius;
 		z-index: 60;
 		transform: translateY(10px);
 		opacity:0;
@@ -59,9 +59,9 @@
 }
   
 .nav-menu li.has-dropdown>.dropdown .dropdown-body {
-		background-color:$white;
+		background-color: $terciary-color;
 		box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
-		border-top: 2px solid #875905;
+		border-top: 0.3rem solid $primary-color;
 }
   
 .nav-menu li.has-dropdown.megamenu {
@@ -90,8 +90,8 @@
 		z-index: 70;
 		position: relative;
 		margin-left: -3rem;
-		border-top-right-radius: 1rem;
-		border-bottom-right-radius: 1rem;
+		border-top-right-radius: $border-radius;
+		border-bottom-right-radius: $border-radius;
 }
   
 .nav-menu li.has-dropdown.megamenu>.dropdown.tab-dropdown .tab-nav {
@@ -99,13 +99,13 @@
 		box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
 		position: relative;
 		z-index: 60;
-		border-bottom-left-radius: 10px;
-		border-top-left-radius: 10px;
+		border-bottom-left-radius: $border-radius;
+		border-top-left-radius: $border-radius;
 }
   
 .nav-menu li.has-dropdown.megamenu>.dropdown.tab-dropdown .tab-nav  {
 		&:first-child {
-			border-top-left-radius: 10px;
+			border-top-left-radius: $border-radius;
 		}
 }
   
@@ -113,40 +113,40 @@
 		width: 100%;
 		display: block;
 		padding: 1.5rem;
-		color: $white;
+		color: $terciary-color;
 		font-size: $font-13;
 		text-decoration:none;
 }
 
 .tab-nav > a.nav-item.nav-link.active:first-child{
-		border-top-left-radius:10px;
+		border-top-left-radius: $border-radius;
 }
 
 .tab-nav > a.nav-item.nav-link.active:last-child{
-		border-bottom-left-radius:10px;
+		border-bottom-left-radius: $border-radius;
 }
 
 .tab-nav > a.nav-item.nav-link.active{
 		background: $primary-color;
-		color: $white;
+		color: $terciary-color;
 }
 
 .tab-nav > a.nav-item.nav-link:hover:first-child, 
 .tab-nav > a.nav-item.nav-link:focus:first-child {
-		border-top-left-radius:10px;
+		border-top-left-radius: $border-radius;
 }
 	
 .tab-nav > a.nav-item.nav-link:hover:last-child, 
 .tab-nav > a.nav-item.nav-link:focus:last-child {
-		border-bottom-left-radius:10px;
+		border-bottom-left-radius: $border-radius;
 }
 	
 .tab-nav > a.nav-item.nav-link:hover,
 .tab-nav > a.nav-item.nav-link:focus {
 		border: $no-border;
 		background: $primary-color;
-		color:$white;
-		border-radius:0;
+		color:$terciary-color;
+		border-radius: $no-border;
 		transition:0.20s linear;
 }
 
@@ -159,7 +159,7 @@
 		position: relative;
 		margin: -5rem 0px 0px 3%;
 		padding: 5%;
-		background: $white;
+		background: $terciary-color;
 		z-index: 10;
 }
   
@@ -170,7 +170,7 @@
 }
 	
 .post .post-body a {
-		color: #333;
+		color: $txt-primary-color;
 }
   
 .post .post-img {
@@ -273,7 +273,7 @@
 	  margin:0 0 2rem 0;
 		font-size:$font-14;
 		a {
-			color:#333;
+			color:$txt-primary-color;
 			transition: 500ms ease-in;
 			&:hover {
 				color:#875905;

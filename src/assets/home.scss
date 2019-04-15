@@ -17,9 +17,8 @@
 				object-fit: cover;
 				z-index:-1;
 			}
-			@include spaces(margin, bottom, $thirty);
 			.titles {
-				@include titles($white, 3rem, $no-border);
+				@include titles($terciary-color, 3rem, $no-border);
 				@include spaces(margin, top, $twenty);
 				@include spaces(margin, bottom, $twenty);
 				order: -2;
@@ -35,12 +34,12 @@
 				background: none;
 				padding: 1.2rem 0;
 				li, a {
-					color:$white; 
+					color:$terciary-color; 
 					font-size:$font-12;
 					text-shadow: 2px 2px 4px #1a1a1a;
 				}
 				li:before {
-					color:$white;
+					color:$terciary-color;
 				}
 			}
 		}
@@ -49,6 +48,7 @@
 				width: 150px; 
 				height: 30px;
 				font-size: 1.2rem;
+				@include spaces(margin, top, $thirty);
 			}
 		}
 		.card-wrap {
@@ -59,8 +59,8 @@
 				@include spaces(padding, top, $thirty);
 				@include spaces(padding, right, $no-padding);
 				border: $no-border;
-				border-bottom: $border-bottom;
-				background:#f2f2f2;
+				border-bottom: $border;
+				background: transparent;
 				.card-content {
 					display: $display-flex;
 					flex-direction: row;
@@ -80,19 +80,19 @@
 						span {display:block; font-size:1.6rem;}
 						.btn-group {
 							@include spaces(margin, bottom, $twenty);
-							border-radius:6px;
+							border-radius: $border-radius;
 							.fa-shopping-cart {font-size: 1.2rem;}
 							width: 132px;
 							height:30px;
 							.btn {
-								background: $white; 
+								background: $terciary-color; 
 								border-color: $primary-color; 
 								color: $primary-color; 
 								font-weight: bold;
 							}
 							.btn:last-child {
 								background:$primary-color; 
-								color:$white;
+								color:$terciary-color;
 							}
 						}
 					}
@@ -165,7 +165,7 @@
 		.main {
 			.banner {
 				.titles {
-					@include titles($white, 4rem, $no-border);
+					@include titles($terciary-color, 4rem, $no-border);
 				}
 			}
 			#breadcrumb {
@@ -180,7 +180,7 @@
 					.card-content {
 						@include default-border;
 						padding: 1rem 2rem;
-						background: $white;
+						background: $terciary-color;
 						img {
 							width: 160px; 
 							height:160px;

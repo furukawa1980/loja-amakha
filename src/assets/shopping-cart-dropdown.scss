@@ -1,7 +1,7 @@
 .header-infos {
 	.dropdown-menu {
 		top: 10px!important;
-		border-radius: 6px;
+		border-radius: $border-radius;
 		border-width:2px;
 		transform: translateY(10px);
 		transition: 0.2s all; transform: none;
@@ -43,16 +43,8 @@
 		}
 	}
 	button {
-		font-size: 1.2rem; 
-		height:30px; 
-		background-image:$primary-color; 
-		border: #333; 
-		border-radius:6px; 
-		margin-bottom:10px; 
-		transition: 0.2s ease-in;
-		background-size: 200% auto;
-		&:hover {
-			background-position:right center;
-		}
+		@include default-button;
+		@include spaces(margin, bottom, $ten); 
+		width: 100%;
 	}
 }

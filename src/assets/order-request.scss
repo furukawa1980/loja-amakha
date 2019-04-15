@@ -20,11 +20,12 @@
 				.o-r-c-info, .o-r-c-summary {
 						@include spaces(padding, all, $ten); 
 						@include default-border;
-						background: $white;
+						background: $terciary-color;
 						span {float:right;}
 				}	
 				.o-r-c-summary {
 						p {
+								@include spaces(padding, all, 0.35rem); 
 								margin: 2rem 0;
 								border-bottom:$border;	
 						}
@@ -39,14 +40,14 @@
 						@include default-border;
 						@include spaces(padding, all, $ten); 
 						@include spaces(margin, top, 0.2rem); 
-						background: $white;
+						background: $terciary-color;
 						img {margin: 0 2rem 0 0; width:60px; height:60px;}
 						p:last-child {
 							text-align: right; 
 							margin-left: auto;
 						}
 						span {
-							display:block;
+							display:block; color:#757575;
 						}
 				}
 		}
@@ -59,7 +60,7 @@
 						@include default-border;
 						position: relative;
 						@include spaces(padding, all, $twenty); 
-						background: $white;
+						background: $terciary-color;
 						li {
 								margin: $no-margin;
 								@include spaces(padding, left, $twenty); 
@@ -69,13 +70,13 @@
 										position:absolute; 
 										top:0.2rem; 
 										left:-0.3rem; 
-										color:$secondary-color; 
+										color: $primary-color; 
 										z-index: 99;}
 								a {
 									color:$secondary-color; 
 									font-size:$font-13;
 								}
-								p {font-size:$font-12; color:#333;}
+								p {font-size:$font-12; color:#757575;}
 						}
 						li:before {
 								content: ' ';
@@ -83,7 +84,7 @@
 								display: inline-block;
 								position: absolute;
 								border-radius: 50%;
-								border: 0.2rem solid $secondary-color; 
+								border: 0.2rem solid $primary-color; 
 								left: -1rem;
 								width: 20px;
 								height: 20px;
@@ -92,7 +93,7 @@
 				}
 				.timeline:before {
 						content: ' ';
-						background: $secondary-color; 
+						background: $primary-color; 
 						display: inline-block;
 						position: absolute;
 						top:0;
