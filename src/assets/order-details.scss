@@ -8,6 +8,7 @@
 			height: auto;
 			@include default-border;
 			@include spaces(margin, bottom, $twenty);
+			background:$white;
 		}
 	}
 	.order-details-description {
@@ -53,6 +54,20 @@
 				background:$primary-color; 
 				color:$white;
 			}
+		}
+	}
+	.order-details-alsoEnjoy {
+		@include spaces(margin, top, $forty);
+		h2 {
+			@include spaces(margin, bottom, $forty);
+		}
+		.slick-container {
+			display: flex;
+			align-items: center;
+			.fa-arrow-circle-left, .fa-arrow-circle-right {
+				font-size: 4rem;
+			}
+			
 		}
 	}
 }

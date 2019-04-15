@@ -1,0 +1,25 @@
+@import './slick/slick-theme';
+@import './slick/slick';
+
+.slick-product {
+
+    .img-thumbnail {
+        padding: .25rem;
+        background-color: transparent;
+        border: 1px solid #dee2e6;
+        border-radius: 0.6rem;
+        width: 100%;
+        height: auto;
+        @include spaces(margin, bottom, $twenty);
+    }
+    h3 {font-size:1.3rem; line-height: 1.8rem; margin: $no-margin;}
+    .fa-star {font-size: 1.4rem;}
+    span {display:block; font-size:1.6rem;}
+	p {
+		@include spaces(margin, top, $twenty);
+        font-size:1.2rem;
+    }
+    
+    
+}
+

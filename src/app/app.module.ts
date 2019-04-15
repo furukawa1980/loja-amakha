@@ -25,6 +25,9 @@ import { SnackbarComponent } from './snackbar/snackbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { OrderDetailsComponent } from './order-details/order-details.component';
 
+import { LazyLoadScriptService } from './lazy-load-script.service';
+import { CarouselComponent } from './carousel/carousel.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +44,8 @@ import { OrderDetailsComponent } from './order-details/order-details.component';
     ResponsiveMenuComponent,
     SnackbarComponent,
     SidebarComponent,
-    OrderDetailsComponent
+    OrderDetailsComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +55,7 @@ import { OrderDetailsComponent } from './order-details/order-details.component';
     BrowserAnimationsModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [HomeService],
+  providers: [HomeService, LazyLoadScriptService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
