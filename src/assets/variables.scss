@@ -15,9 +15,7 @@
 
 .form-control {
 		box-shadow: none!important; 
-		border: none!important;
 }
-
 
 // VARIABLES
 
@@ -31,7 +29,7 @@ $font-12: 1.2rem;
 $font-13: 1.3rem;
 $font-14: 1.4rem;
 
-// MAIN COLOR 
+// MAIN COLORS 
 $primary-color: #bd9f5b;
 $secondary-color: lighten(#000, 20%);
 $terciary-color: #fff;
@@ -66,51 +64,59 @@ $forty : 4rem;
 
 // MIXINS
 @mixin spaces ($type: margin, $direction: all, $amount: $ten){
-	@if $type == padding {
-		@if $direction == all{
-			padding: $amount;
-		} @else if $direction == top {
-			padding-top:$amount
-		} @else if $direction == left {
-			padding-left:$amount
-		} @else if $direction == right {
-			padding-right:$amount
+		@if $type == padding {
+				@if $direction == all{
+					padding: $amount;
+				} @else if $direction == top {
+					padding-top:$amount
+				} @else if $direction == left {
+					padding-left:$amount
+				} @else if $direction == right {
+					padding-right:$amount
+				} @else {
+					padding-bottom:$amount
+				}
 		} @else {
-			padding-bottom:$amount
+				@if $direction == all{
+					margin: $amount;
+				} @else if $direction == top {
+					margin-top:$amount
+				} @else if $direction == left {
+					margin-left:$amount
+				} @else if $direction == right {
+					margin-right:$amount
+				} @else {
+					margin-bottom:$amount
+				}
 		}
-	} @else {
-		@if $direction == all{
-			margin: $amount;
-		} @else if $direction == top {
-			margin-top:$amount
-		} @else if $direction == left {
-			margin-left:$amount
-		} @else if $direction == right {
-			margin-right:$amount
-		} @else {
-			margin-bottom:$amount
-		}
-	}
 }
 
 @mixin titles($color, $size, $border) {
+
     color: $color;
     font-size: $size;
 		border-bottom: $border;
+
 }
 
 @mixin no-padding($padding-right: 0, $padding-left: 0) {
+
 		padding-right: $padding-right;
 		padding-left: $padding-left
+
 }
 
+// DEFAULT TEXT
 @mixin default-text {
+
 	font: {
 	  size: 1.3rem;
 	}
 	color: $txt-primary-color;
-  }
-  
+
+}
+	
+// DEFAULT BORDER 
 @mixin default-border {
 
 		border: {
@@ -122,23 +128,43 @@ $forty : 4rem;
 
 }
 
+// DEFAULT BUTTON
 @mixin default-button {
 
-		width: 100px;
-		height:40px;
+		width: 120px;
+		@include spaces(padding, all, $ten);
 		font-size: $font-13;
 		background: $primary-color;
 		color: $terciary-color;
-		transition: 0.2s ease;
+		transition: 0.5s ease;
 		border: {
-			style: solid;
-			width: 0.1rem;
-			color: $primary-color;
-			radius: $border-radius;
+				style: solid;
+				width: 0.1rem;
+				color: #b19964;
+				radius: $border-radius;
 		}
 		&:hover, &:active, &:focus  {
-			background-color:rgba(142, 117, 59, 0.8);
-			border:$no-border;
+				background-color:rgba(142, 117, 59, 0.8);
+				border-color: $primary-color;
 		}
 
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+	color: $txt-primary-color;
+	&:hover {
+			text-decoration: none;
+			outline: none;
+			color:rgba(142, 117, 59, 0.8);
+	}
+}
+
+ul{
+		margin: 0;    
+		padding: 0; 
+		li {
+		    list-style: none; 
+		}
 }

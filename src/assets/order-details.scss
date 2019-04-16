@@ -14,7 +14,7 @@
 	}
 	.order-details-description {
 		.ref-number {
-			margin:0 20px 0 0;
+			margin:0 2rem 0 0;
 		}
 		span {
 			font-size:1.6rem; 
@@ -34,16 +34,11 @@
 			}
 		}
 		.btn-buy {
+			@include spaces(padding, all, $ten);
+			@include spaces(margin, top, $twenty);
+			@include default-button;
 			width: 200px;
 			font-size: 2rem;
-			padding: 10px;
-			@include spaces(margin, top, $twenty);
-			border-radius: $border-radius;
-			border-color: $primary-color;
-			background: $primary-color;
-			&:hover {
-				background-color:rgba(142, 117, 59, 0.8)
-			}
 		}
 		.btn-group {
 			@include spaces(margin, top, $ten);
@@ -66,7 +61,7 @@
 }
 
 
-.order-details-teste {
+.order-details-wrap {
 	flex-wrap: wrap;
 	width:100%;
 	background: transparent;
@@ -92,9 +87,11 @@
 @media only screen and (max-width: 767px) {
 
 	.order-details-description {
-		h2 {text-align: center;}
+		h2 {
+			text-align: center;
+		}
 		.rating {
-			display:flex;
+			display: $display-flex;
 			justify-content: center;
 		}
 		.btn-buy {

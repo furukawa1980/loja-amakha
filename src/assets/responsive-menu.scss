@@ -18,7 +18,6 @@
 
 .menu-list ul,
 .menu-list li {
-    list-style: none;
     padding: 0.5rem 0;
     margin: $no-margin;
     line-height: 35px;
@@ -38,12 +37,12 @@
 
 .menu-list ul .sub-menu li.active,
 .menu-list li .sub-menu li.active {
-    color: #d19b3d;
+    color: $primary-color;
 }
 
 .menu-list ul .sub-menu li.active a,
 .menu-list li .sub-menu li.active a {
-    color: #d19b3d;
+    color: $primary-color;
 }
 
 .menu-list ul .sub-menu li,
@@ -77,6 +76,7 @@
 .menu-list li a {
     text-decoration: none;
     color: #e1ffff;
+    font-size: $font-13;
 }
 
 .menu-list li a i {
@@ -86,7 +86,7 @@
 }
 
 .menu-list li:hover {
-    border-left: 0.3rem solid #d19b3d;
+    border-left: 0.3rem solid $primary-color;
     background-color: $secondary-color;
     transition: all 1s ease;
 }

@@ -8,7 +8,7 @@
 				background: $terciary-color;
 				p {
 						margin:$no-margin; 
-						font-size:$font-14;
+						font-size: 1.25rem;
 						span {
 								color:#ff0000;
 								font-weight:bold;
@@ -39,8 +39,8 @@
 		}
 		a {
 				color:$secondary-color;
-				font-size:$font-13;
-				padding: 0.5rem 0.7rem;
+				font-size:$font-12;
+				padding: 0.5rem 0.5rem;
 				&:hover {
 						color:$txt-primary-color;
 				}
@@ -63,6 +63,7 @@
 				.payment-methods-products-wrap {
 						display:$display-flex;		
 						flex-wrap:wrap;	
+						@include spaces(margin, bottom, 2rem);
 						.p-m-product {
 								.p-m-p-content {
 										display:$display-flex;
@@ -128,6 +129,9 @@
 										@include default-button;
 										float:right;
 								}
+								.attach-vouchers {
+										width: 200px;
+								}
 						}
 				}
 		}	
@@ -156,12 +160,13 @@
 		
 		.payment-methods {
 				a {
+						font-size:$font-13;
 						padding: 0.5rem 2rem;
 				}
 				.payment-methods-products {
 						@include no-padding;
 						.payment-methods-products-wrap {
-								padding:0;
+								padding: $no-padding;
 						}
 				}
 		}
@@ -169,6 +174,7 @@
 		.order-summary {
 				.order-summary-content {
 						p {
+								font-size:$font-14;
 								strong {font-size:2.5rem;}
 						}
 						.order-summary-inline {

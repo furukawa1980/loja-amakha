@@ -1,5 +1,4 @@
 .header {
-	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
     padding: 0.5rem 0 0 0;		
@@ -10,40 +9,27 @@
 		align-items: center;
 		@include spaces(margin, top, $ten);
 		@include spaces(margin, bottom, $ten);
-		input, button {
-			font-size: 1.2rem; 
-			height:35px; 
-			border: 1px solid #ddd!important;
-		}
-		input{
+		.form-control {
+			font-size: 1.3rem; 
+			border: 0.1rem solid #ccc;
 			border-top-left-radius: $border-radius; 
 			border-bottom-left-radius: $border-radius;
+			height: 41px;
 		} 
-		.input-group-append {
-			.btn-grad {
-				border:$no-border;
-				border-top-right-radius: $border-radius; 
-				border-bottom-right-radius: $border-radius;
-				color:$terciary-color;
-				font-size:$font-13;
-				transition: 0.2s ease-in;
-				background-size: 200% auto;
-				background-color: $primary-color;
-				// background-image: linear-gradient(to bottom, #a67939, #845108);
-				&:hover {
-					// background-position: top bottom ; 
-					background-color:rgba(142, 117, 59, 0.8)
-				}
-			}
+		button {
+			@include default-button;
+			width: 100px;
 		}
 	}
 	.header-menu {
 		display: $display-flex; 
 		align-items: center;
-		.fa-bars {font-size:2.1rem;}
+		.fa-bars {
+			font-size:2.1rem;
+		}
 		.logo {
-			width:78px; 
-			height:40px; 
+			width:70px; 
+			height:36px; 
 			@include spaces(margin, right, $twenty);
 			@include spaces(margin, left, $twenty);
 		}
@@ -51,40 +37,51 @@
 	.header-infos {
 		display: $display-flex; 
 		align-items: center;
-		flex-direction: row-reverse; justify-content: space-between;
+		flex-direction: row-reverse; 
+		justify-content: space-between;
 		.fa-user {
 			font-size:2.2rem; 
 			color:$primary-color;
 			@include spaces(margin, right, $twenty);
 			@include spaces(margin, left, $twenty);
 		}
-		.fa-shopping-cart {font-size:2.2rem; color: $primary-color;}
+		.fa-shopping-cart {
+			font-size:2.2rem; 
+			color: $primary-color;
+		}
 		.amk-balance {
-			margin: 0.3rem 0 0 0;
 			display: flex;
 			align-items:center;
+			margin: 0.3rem 0 0 0;
 			.fa-buysellads {
 				font-size:2rem;
 				color: $primary-color;
 			}
-			strong {color:$txt-primary-color;}
+			strong {
+				color:$txt-primary-color;
+			}
 		}
 	}
 }
 
-.topbar {display:none;}
+.topbar {
+	display:none;
+}
 
 
 @media only screen and (min-width: 768px) {
 
 	.header { 
-		padding: 1rem 0 1rem 0;
+		padding: 1rem 0;
 		.header-menu {
-			.fa-bars {display:none;}
-			.logo {width:100px; height:51px; margin: $no-margin;}
-		}
-		.input-group {
-			input, button {height:40px;} 
+			.fa-bars {
+				display:none;
+			}
+			.logo {
+				width:100px; 
+				height:51px; 
+				margin: $no-margin;
+			}
 		}
 		.header-infos {
 			order: 1;
@@ -104,8 +101,8 @@
 			}
 			.topbar-menu {
 				display: $display-flex;
-				height: 60px;
 				align-items: center;
+				height: 60px;
 				p {
 					font-weight: bold;
 					font-size: 1.6rem;
@@ -119,19 +116,18 @@
 				justify-content: flex-end;
 				.topbar-menu-categories {
 					display: $display-flex;
-					height: 60px;
 					align-items: center;
 					justify-content: flex-end;
-					list-style-type:none; 
-					margin:0;
+					height: 60px;
+					margin: $no-margin; 
 					li {
 						@include spaces(margin, left, $thirty); 
 						a {
-							font-size:1.4rem; 
-							color:#fff; 
-							transition-duration: 500ms;
+							font-size: 1.3rem; 
+							color: $terciary-color; 
+							transition: 0.5s ease;
 							&:hover {
-								color: #ccc;
+								color: $txt-terciary-color;
 							}
 						}
 					}

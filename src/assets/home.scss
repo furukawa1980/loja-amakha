@@ -4,7 +4,7 @@
 	@include spaces(padding, bottom, $thirty);
 	.main {
 		display: $display-flex;
-		flex-wrap:wrap;
+		flex-wrap: wrap;
 		flex:1;
 		align-content: flex-start;
 		.banner {
@@ -23,7 +23,7 @@
 				@include spaces(margin, bottom, $twenty);
 				order: -2;
 				font-weight: 600;
-				text-shadow: 2px 2px 4px #1a1a1a;
+				text-shadow: 0.2rem 0.2rem 0.4rem #1a1a1a;
 			}
 		}
 		#breadcrumb {
@@ -34,20 +34,22 @@
 				background: none;
 				padding: 1.2rem 0;
 				li, a {
-					color:$terciary-color; 
-					font-size:$font-12;
-					text-shadow: 2px 2px 4px #1a1a1a;
+					color: $terciary-color; 
+					font-size: $font-12;
+					text-shadow: 0.2rem 0.2rem 0.4rem #1a1a1a;
 				}
 				li:before {
-					color:$terciary-color;
+					color: $terciary-color;
 				}
 			}
 		}
 		.select {
 			.custom-select {
-				width: 150px; 
+				width: 170px; 
 				height: 30px;
-				font-size: 1.2rem;
+				font-size: 1.3rem;
+				border-top-left-radius: $border-radius;
+				border-top-right-radius: $border-radius;
 				@include spaces(margin, top, $thirty);
 			}
 		}
@@ -55,7 +57,7 @@
 			display: $display-flex;
 			flex-wrap: wrap; 
 			.card {
-				margin:0;
+				margin: $no-margin;
 				@include spaces(padding, top, $thirty);
 				@include spaces(padding, right, $no-padding);
 				border: $no-border;
@@ -69,21 +71,32 @@
 						height:150px;
 					}
 					.card-body {
-						padding:8px;
-						width:160px;
-						h3 {font-size:1.3rem; line-height: 1.8rem; margin: $no-margin;}
-						.fa-star {font-size: 1.4rem;}
+						padding: 0.8rem;
+						width: 160px;
+						h3 {
+							font-size:1.3rem; 
+							line-height: 1.8rem; 
+							margin: $no-margin;
+						}
+						.fa-star {
+							font-size: 1.4rem;
+						}
 						p {
 							@include spaces(margin, top, $twenty);
-							font-size:1.2rem;
+							font-size: 1.2rem;
 						}
-						span {display:block; font-size:1.6rem;}
+						span {
+							display:block; 
+							font-size:1.6rem;
+						}
 						.btn-group {
-							@include spaces(margin, bottom, $twenty);
-							border-radius: $border-radius;
-							.fa-shopping-cart {font-size: 1.2rem;}
 							width: 132px;
 							height:30px;
+							@include spaces(margin, bottom, $twenty);
+							border-radius: $border-radius;
+							.fa-shopping-cart {
+								font-size: 1.2rem;
+							}
 							.btn {
 								background: $terciary-color; 
 								border-color: $primary-color; 
@@ -91,8 +104,8 @@
 								font-weight: bold;
 							}
 							.btn:last-child {
-								background:$primary-color; 
-								color:$terciary-color;
+								background: $primary-color; 
+								color: $terciary-color;
 							}
 						}
 					}
@@ -100,7 +113,7 @@
 			}
 		}
 		.sidebar {
-        	display:none;
+        	display: none;
     	}
     }
 }
@@ -115,14 +128,14 @@
 				order: 1;
 				.card {
 					border: $no-border;
-					transition: 500ms ease;
+					transition: 0.5s ease;
 					&:hover {
 						@include spaces(padding, top, $ten);
 					}
 					.card-content {
 						flex-direction: column;
 						.card-body {
-							padding:0.5rem 0.4rem;
+							padding: 0.5rem 0.4rem;
 							width:160px;
 							.btn-group {
 								display: $display-flex;
@@ -139,16 +152,15 @@
 				ul {
 					padding: $no-padding;
 					li {
-						list-style-type: none;
-						margin:1.4rem 0 0 0.8rem;
+						margin: 1.4rem 0 0 0.8rem;
 					}
 					label {
 						font-weight: 600;
 						@include default-text;
-						transition: 500ms ease-in;
+						transition: 0.5s ease;
 						cursor:pointer;
 						&:hover {
-							color: #947054;
+							color: $primary-color;
 						}
 					}
 				}
@@ -157,7 +169,6 @@
 	}
 	
 }
-
 
 @media only screen and (min-width: 992px) {
 
@@ -188,7 +199,7 @@
 						&:hover {
 							border:0.1rem solid $primary-color;
 							cursor: pointer; 
-							box-shadow: 0 0 3px 1px rgba(0,0,0,.08);
+							box-shadow: 0 0 0.3rem 0.1rem rgba(0,0,0,.08);
 						}
 					}
 				}
