@@ -44,7 +44,7 @@
 						@include spaces(margin, top, 0.2rem); 
 						background: $terciary-color;
 						img {
-							margin: 0 2rem 0 0; 
+							margin: 0 1rem 0 0; 
 							width:50px; 
 							height:50px;
 						}
@@ -55,6 +55,7 @@
 						p:last-child {
 							text-align: right; 
 							margin-left: auto;
+							width: 32%;
 						}
 						span {
 							display:block; 
