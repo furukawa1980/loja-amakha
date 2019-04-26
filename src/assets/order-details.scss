@@ -1,6 +1,6 @@
 .order-details {
 	flex-wrap: wrap;
-	width:100%;
+
 	background: $terciary-color;
     @include spaces(padding, all, $thirty);
 	.order-details-img {
@@ -63,7 +63,7 @@
 
 .order-details-wrap {
 	flex-wrap: wrap;
-	width:100%;
+
 	background: transparent;
 	.order-details-alsoEnjoy {
 		@include spaces(margin, top, $forty);
@@ -86,34 +86,47 @@
 
 @media only screen and (max-width: 767px) {
 
-	.order-details-description {
-		h2 {
-			text-align: center;
-		}
-		.rating {
-			display: $display-flex;
-			justify-content: center;
-		}
-		.btn-buy {
+	.content {
+		display: block;
+		.main {
 			display: block;
-			margin: 0 auto;
+			.order-details-description {
+				h2 {
+					text-align: center;
+				}
+				.rating {
+					display: $display-flex;
+					justify-content: center;
+				}
+				.btn-buy {
+					display: block;
+					margin: 0 auto;
+				}
+				p {
+					text-align: center;
+				}
+				.btn-group { 
+					display: none;
+				}
+			}
 		}
-		p {
-			text-align: center;
-		}
-		.btn-group { 
-			display: none;
-		}
+
 	}
 
 }
 
 @media only screen and (min-width: 768px) {
 
-	.order-details-description {
-		.ref-number {
-			float:left; 
+	.content {
+		display: block;
+		.main {
+			display: block;
+			.order-details-description {
+				.ref-number {
+					float:left; 
+				}
+			}
 		}
 	}
-
+	
 }

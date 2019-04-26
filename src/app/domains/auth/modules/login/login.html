@@ -1,0 +1,52 @@
+<section class="login">
+
+		<div class="login-container">
+
+			<div class="login-wrap">
+
+          <form class="login-form" [formGroup]="_form" novalidate>
+
+            <div class="login-avatar"> 
+                <img src="assets/images/store/user.png" alt="">
+            </div>
+ 
+            <span class="login-title">   
+                Joana d´Arc
+            </span>
+
+            <div class="login-input">
+              <input type="text" placeholder="Login" formControlName="email" [readonly]="_disableSubmitButton">
+              <span class="focus"></span>
+              <span class="symbol">
+                  <i class="fa fa-user"></i>
+              </span>
+            </div>
+
+            <div class="login-input">
+              <input type="password" placeholder="Senha" formControlName="password" [readonly]="_disableSubmitButton">
+              <span class="focus"></span>
+              <span class="symbol">
+                  <i class="fa fa-lock"></i>
+              </span>
+            </div>
+
+            <div class="login-container-btn">
+                <button class="login-btn" (click)="onSubmitCredentials()" [disabled]="_disableSubmitButton">
+                  Login
+                </button>
+            </div>
+
+            <div class="login-txt">
+                <a href="#">Esqueceu seu Usuário / Senha?</a>
+            </div>
+
+            <div class="login-txt">
+                <a href="#">Cadastre-se <i class="fa fa-long-arrow-right"></i></a>
+            </div>
+          </form>
+        
+      </div>
+      
+    </div>
+    
+	</section>

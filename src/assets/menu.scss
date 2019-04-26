@@ -63,12 +63,12 @@
 }
   
 .nav-menu li.has-dropdown.megamenu>.dropdown {
-		width: 100%;
+		width: 100%;height: 100%;
 }
   
 .nav-menu li.has-dropdown.megamenu>.dropdown .dropdown-body {
 		padding: 3rem;
-		height: 391px;
+		height: 100%;
 }
   
 .nav-menu li.has-dropdown.megamenu>.dropdown .dropdown-list {
