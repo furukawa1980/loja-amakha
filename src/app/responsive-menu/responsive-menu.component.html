@@ -1,11 +1,13 @@
-<div class="menu-list">
+<i (click)="animateMe()" class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+<div class="menu-list" [@openClose]="state">  
 
     <ul id="menu-content" class="menu-content collapse out">
 
-        <li  data-toggle="collapse" data-target="#financeiro" class="collapsed active">
-          <a href="#"><i class="fa fa-gift fa-coins"></i> Financeiro <span class="arrow"></span></a>
+        <li (click)="toggle('divA')" aria-expanded="false" data-toggle="collapse" data-target="#financeiro" class="collapsed active">
+            <a href="#"><i class="fa fa-gift fa-coins"></i> Financeiro <span class="arrow"></span></a>
         </li>
-        <ul class="sub-menu collapse" id="financeiro">
+        <ul class="sub-menu" id="financeiro" *ngIf="divName==='divA'" [@popOverState]="stateName" (@popOverState.done)="animationDone()">
             <li><a href="#">Resumo Mensal</a></li>
             <li><a href="#">Minhas Contas</a></li>
             <li><a href="#">Transferir Saldo</a></li>
@@ -14,10 +16,10 @@
             <li><a href="#">Saques</a></li>
         </ul>
 
-        <li data-toggle="collapse" data-target="#rede" class="collapsed">
+        <li (click)="toggle('divB')" data-toggle="collapse" data-target="#rede" class="collapsed">
             <a href="#"><i class="fa fa-globe"></i> Rede <span class="arrow"></span></a>
         </li>  
-        <ul class="sub-menu collapse" id="rede">
+        <ul class="sub-menu" id="rede" *ngIf="divName==='divB'"  [@popOverState]="stateName" (@popOverState.done)="animationDone()">
             <li><a href="#">Graduação</a></li>
             <li><a href="#">Vendas da Rede</a></li>
             <li><a href="#">Minha Rede</a></li>
@@ -27,10 +29,10 @@
             <li><a href="#">Contatos</a></li>
         </ul>
 
-        <li data-toggle="collapse" data-target="#pedidos" class="collapsed">
+        <li (click)="toggle('divC')" data-toggle="collapse" data-target="#pedidos" class="collapsed">
             <a href="#"><i class="fa fa-address-book"></i> Pedidos <span class="arrow"></span></a>
         </li>
-        <ul class="sub-menu collapse" id="pedidos">
+        <ul class="sub-menu" id="pedidos" *ngIf="divName==='divC'" [@popOverState]="stateName" (@popOverState.done)="animationDone()">
             <li><a href="#">Novo Pedido</a></li>
             <li><a href="#">Pedidos Recentes</a></li>
             <li><a href="#">Meus Pedidos</a></li>
@@ -38,10 +40,10 @@
             <li><a href="#">Pedidos em Aberto</a></li>
         </ul>
 
-        <li data-toggle="collapse" data-target="#loja" class="collapsed">
+        <li (click)="toggle('divD')" data-toggle="collapse" data-target="#loja" class="collapsed">
             <a href="#"><i class="fa fa-shopping-cart"></i> Loja <span class="arrow"></span></a>
         </li>
-        <ul class="sub-menu collapse" id="loja">
+        <ul class="sub-menu" id="loja" *ngIf="divName==='divD'" [@popOverState]="stateName" (@popOverState.done)="animationDone()">
             <li><a href="#">Perfumes</a></li>
             <li><a href="#">Creames Hidratantes</a></li>
             <li><a href="#">Linha Capilar</a></li>
@@ -51,10 +53,10 @@
             <li><a href="#">Eventos</a></li>
         </ul>
 
-        <li data-toggle="collapse" data-target="#ponto" class="collapsed">
+        <li (click)="toggle('divE')" data-toggle="collapse" data-target="#ponto" class="collapsed">
             <a href="#"><i class="fa fa-info-circle"></i> Ponto de Apoio <span class="arrow"></span></a>
         </li>
-        <ul class="sub-menu collapse" id="ponto">
+        <ul class="sub-menu" id="ponto" *ngIf="divName==='divE'" [@popOverState]="stateName" (@popOverState.done)="animationDone()">
             <li><a href="#">Perfumes</a></li>
             <li><a href="#">Creames Hidratantes</a></li>
             <li><a href="#">Linha Capilar</a></li>
@@ -64,10 +66,10 @@
             <li><a href="#">Eventos</a></li>
         </ul>
 
-        <li data-toggle="collapse" data-target="#utilidades" class="collapsed">
+        <li (click)="toggle('divF')" data-toggle="collapse" data-target="#utilidades" class="collapsed">
             <a href="#"><i class="fa fa-neuter"></i> Utilidades <span class="arrow"></span></a>
         </li>
-        <ul class="sub-menu collapse" id="utilidades">
+        <ul class="sub-menu" id="utilidades" *ngIf="divName==='divF'" [@popOverState]="stateName" (@popOverState.done)="animationDone()">
             <li><a href="#">Perfumes</a></li>
             <li><a href="#">Creames Hidratantes</a></li>
             <li><a href="#">Linha Capilar</a></li>
@@ -77,10 +79,10 @@
             <li><a href="#">Eventos</a></li>
         </ul>
 
-        <li data-toggle="collapse" data-target="#atendimento" class="collapsed">
+        <li (click)="toggle('divG')" data-toggle="collapse" data-target="#atendimento" class="collapsed">
             <a href="#"><i class="fa fa-address-book"></i> Atendimento <span class="arrow"></span></a>
         </li>
-        <ul class="sub-menu collapse" id="atendimento">
+        <ul class="sub-menu" id="atendimento" *ngIf="divName==='divG'" [@popOverState]="stateName" (@popOverState.done)="animationDone()">
             <li><a href="#">Perfumes</a></li>
             <li><a href="#">Creames Hidratantes</a></li>
             <li><a href="#">Linha Capilar</a></li>
@@ -90,10 +92,10 @@
             <li><a href="#">Eventos</a></li>
         </ul>
 
-        <li data-toggle="collapse" data-target="#cadastro" class="collapsed">
+        <li (click)="toggle('divH')" data-toggle="collapse" data-target="#cadastro" class="collapsed">
             <a href="#"><i class="fa fa-registered"></i> Cadastro <span class="arrow"></span></a>
         </li>
-        <ul class="sub-menu collapse" id="cadastro">
+        <ul class="sub-menu" id="cadastro" *ngIf="divName==='divH'" [@popOverState]="stateName" (@popOverState.done)="animationDone()">
             <li><a href="#">Perfumes</a></li>
             <li><a href="#">Creames Hidratantes</a></li>
             <li><a href="#">Linha Capilar</a></li>
